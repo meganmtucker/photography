@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seniors | Megan Tucker Photography</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Tahoma, sans-serif;
+      background-color: #fff;
+      color: #222;
+    }
+
+    /* NAVBAR */
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      padding: 15px 0;
+      background-color: #fff;
+      border-bottom: 1px solid #ddd;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    nav a {
+      text-decoration: none;
+      font-weight: bold;
+      color: #333;
+      font-size: 16px;
+    }
+    nav a:hover {
+      color: #777;
+    }
+    nav a.active {
+      color: #000;
+    }
+
+    /* MASONRY GRID */
+    .masonry {
+      column-count: 3;
+      column-gap: 15px;
+      padding: 20px;
+    }
+
+    /* Single item */
+    .masonry-item {
+      break-inside: avoid;
+      margin-bottom: 15px;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .masonry-item img {
+      width: 100%;
+      display: block;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+
+    .masonry-item img:hover {
+      transform: scale(1.03);
+    }
+    /* LIGHTBOX OVERLAY */
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.85);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      padding: 20px;
+      box-sizing: border-box;
+      overflow: auto; /* allow scroll if viewport is small */
+    }
+
+    /* WHITE BOX CONTAINER (image + caption) */
+    .lightbox-content {
+      display: flex;
+      flex-direction: row;  /* side by side on desktop */
+      gap: 20px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 90vw;
+      max-height: 90vh;
+      box-sizing: border-box;
+      align-items: center;  /* vertical center */
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    /* IMAGE INSIDE BOX */
+    .lightbox-content img {
+      max-width: calc(100% - 320px); /* leave space for caption */
+      max-height: calc(90vh - 40px); /* subtract top + bottom padding */
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      border-radius: 8px;
+      display: block;
+    }
+
+    /* CAPTION */
+    .lightbox-caption {
+      width: 300px;
+      font-size: 18px;
+      color: #222;
+      text-align: left;
+      overflow-wrap: break-word;
+    }
+
+    /* MOBILE: stack image + caption */
+    @media (max-width: 768px) {
+      .lightbox-content {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-width: 90vw;
+        max-height: 90vh;
+      }
+
+      .lightbox-content img {
+        max-width: 90vw;
+        max-height: calc(90vh - 100px); /* leave padding + caption space */
+      }
+
+      .lightbox-caption {
+        width: 100%;
+        margin-top: 10px;
+        text-align: right;
+      }
+    }
+
+
+  </style>
+</head>
+<body>
+
+<!-- NAV MENU -->
+<nav>
+  <a href="index.html">Home</a>
+  <a href="landscapes.html">Landscapes</a>
+  <a href="seniors.html">Senior Portraits</a>
+  <a href="realestate.html">Real Estate</a>
+  <a href="events.html" class="active">Events</a>
+</nav>
+
+<!-- MASONRY GRID -->
+<section class="masonry">
+  <div class="masonry-item" onclick="openLightbox(this)">
+    <img src=".idea/jpgs/gradbacks.jpg" alt="Senior 1" data-caption="Senior Portrait Shoot">
+  </div>
+  <div class="masonry-item" onclick="openLightbox(this)">
+    <img src=".idea/jpgs/gradbalcony.jpg" alt="Senior 2" data-caption="Senior Portrait Shoot">
+  </div>
+  <div class="masonry-item" onclick="openLightbox(this)">
+    <img src=".idea/jpgs/gradchampagne.jpg" alt="Senior 3" data-caption="Senior Portrait Shoot">
+  </div>
+  <div class="masonry-item" onclick="openLightbox(this)">
+    <img src=".idea/jpgs/graddesk.jpg" alt="Senior 4" data-caption="Senior Portrait Shoot">
+  </div>
+  <div class="masonry-item" onclick="openLightbox(this)">
+    <img src=".idea/jpgs/gradgetup.jpg" alt="Senior 5" data-caption="Senior Portrait Shoot">
+  </div>
+  <div class="masonry-item" onclick="openLightbox(this)">
+    <img src=".idea/jpgs/gradgownback.jpg" alt="Senior 6" data-caption="Senior Portrait Shoot">
+  </div>
+  <div class="masonry-item" onclick="openLightbox(this)">
+    <img src=".idea/jpgs/gradheadshot.jpg" alt="Senior 7" data-caption="Senior Portrait Shoot">
+  </div>
+  <div class="masonry-item" onclick="openLightbox(this)">
+    <img src=".idea/jpgs/gradhug.jpg" alt="Senior 8" data-caption="Senior Portrait Shoot">
+  </div>
+  <div class="masonry-item" onclick="openLightbox(this)">
+    <img src=".idea/jpgs/gradlaugh.jpg" alt="Senior 9" data-caption="Senior Portrait Shoot">
+  </div>
+  <div class="masonry-item" onclick="openLightbox(this)">
+    <img src=".idea/jpgs/gradlauren.jpg" alt="Senior 10" data-caption="Senior Portrait Shoot">
+  </div>
+  <div class="masonry-item" onclick="openLightbox(this)">
+    <img src=".idea/jpgs/gradlibstairs.jpg" alt="Senior 11" data-caption="Senior Portrait Shoot">
+  </div>
+  <div class="masonry-item" onclick="openLightbox(this)">
+    <img src=".idea/jpgs/gradline.jpg" alt="Senior 12" data-caption="Senior Portrait Shoot">
+  </div>
+  <div class="masonry-item" onclick="openLightbox(this)">
+    <img src=".idea/jpgs/gradpole.jpg" alt="Senior 13" data-caption="Senior Portrait Shoot">
+  </div>
+  <div class="masonry-item" onclick="openLightbox(this)">
+    <img src=".idea/jpgs/gradsignhoriz.jpg" alt="Senior 14" data-caption="Senior Portrait Shoot">
+  </div>
+  <div class="masonry-item" onclick="openLightbox(this)">
+    <img src=".idea/jpgs/gradsit.jpg" alt="Senior 15" data-caption="Senior Portrait Shoot">
+  </div>
+  <div class="masonry-item" onclick="openLightbox(this)">
+    <img src=".idea/jpgs/gradsolochamp.jpg" alt="Senior 16" data-caption="Senior Portrait Shoot">
+  </div>
+  <div class="masonry-item" onclick="openLightbox(this)">
+    <img src=".idea/jpgs/gradstandsmile.jpg" alt="Senior 17" data-caption="Senior Portrait Shoot">
+  </div>
+  <div class="masonry-item" onclick="openLightbox(this)">
+    <img src=".idea/jpgs/gradtoss.jpg" alt="Senior 18" data-caption="Senior Portrait Shoot">
+  </div>
+  <div class="masonry-item" onclick="openLightbox(this)">
+    <img src=".idea/jpgs/gradwalk.jpg" alt="Senior 19" data-caption="Senior Portrait Shoot">
+  </div>
+</section>
+
+
+<!-- LIGHTBOX -->
+<div class="lightbox" onclick="closeLightbox(event)">
+  <div class="lightbox-content">
+    <img id="lightbox-img" src="" alt="">
+    <div class="lightbox-caption" id="lightbox-caption"></div>
+  </div>
+</div>
+
+<script>
+  function openLightbox(item) {
+    const img = item.querySelector('img');
+    document.getElementById('lightbox-img').src = img.src;
+    document.getElementById('lightbox-caption').textContent = img.dataset.caption || '';
+    document.querySelector('.lightbox').style.display = 'flex';
+  }
+
+  function closeLightbox(event) {
+    if (event.target.classList.contains('lightbox')) {
+      document.querySelector('.lightbox').style.display = 'none';
+    }
+  }
+</script>
+
+</body>
+</html>

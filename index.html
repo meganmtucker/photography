@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Megan Tucker Photography</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Tahoma, sans-serif;
+            background-color: #ffffff;
+            color: #222;
+        }
+
+        /* NAVBAR */
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            padding: 15px 0;
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        nav a {
+            text-decoration: none;
+            font-weight: bold;
+            color: #333;
+            font-size: 16px;
+        }
+        nav a:hover {
+            color: #777;
+        }
+
+        /* BANNER */
+        .banner {
+            width: 100%;
+            height: 500px;
+            background-image: url(".idea/jpgs/landmountain.jpg");
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            margin-bottom: 0px;
+        }
+
+        /* TEXT ON TOP OF BANNER */
+        .banner-title {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 48px;
+            font-weight: bold;
+            text-shadow: 0 3px 10px rgba(0,0,0,0.6);
+            margin: 0;
+            padding: 0 20px;
+            text-align: center;
+            width: 100%;
+        }
+
+        /* HEADER */
+        header {
+            text-align: center;
+            padding: 40px 10px;
+        }
+
+
+        /* ABOUT ME */
+        .about {
+            max-width: 1100px;
+            margin: 20px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            font-size: 18px;
+            line-height: 1.6;
+            text-align: left;
+        }
+
+        .about a {
+            color: #3366cc;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .about a:hover {
+            text-decoration: underline;
+        }
+
+        /* Mobile responsive */
+        @media (max-width: 768px) {
+            .about {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* 4 COLUMN GRID */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            padding: 10px 40px 60px;
+        }
+
+        .grid-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            cursor: pointer;
+            aspect-ratio: 4 / 3;
+        }
+
+        .grid-item img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .grid-item:hover img {
+            transform: scale(1.03);
+        }
+
+        .grid-item .label {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            padding: 8px 12px;
+            background: rgba(0,0,0,0.6);
+            color: white;
+            font-size: 18px;
+            border-radius: 5px;
+        }
+
+        /* LIGHTBOX OVERLAY */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.85);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            padding: 20px;
+            box-sizing: border-box;
+            overflow: auto;
+        }
+
+        /* WHITE BOX CONTAINER */
+        .lightbox-content {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 90vw;
+            max-height: 90vh;       /* total lightbox height capped */
+            box-sizing: border-box;
+            overflow: hidden;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* IMAGE SIZES - FIT INSIDE WHITE BOX */
+        .lightbox-content img {
+            width: auto;
+            height: auto;
+            max-width: calc(100% - 320px);  /* leave space for caption */
+            max-height: 100%;
+            object-fit: contain;  /* scale proportionally */
+            border-radius: 8px;
+            display: block;
+        }
+
+        /* CAPTION */
+        .lightbox-caption {
+            width: 300px;
+            font-size: 20px;
+            color: #222;
+            overflow-wrap: break-word;
+        }
+
+        /* MOBILE: stack image + caption */
+        @media (max-width: 768px) {
+            .lightbox-content {
+                flex-direction: column;
+                max-width: 90vw;
+                max-height: 90vh;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .lightbox-content img {
+                max-width: 90vw;
+                max-height: 50vh;
+            }
+
+            .lightbox-caption {
+                width: 100%;
+                margin-top: 10px;
+                text-align: center;
+            }
+        }
+
+
+
+    </style>
+</head>
+
+<body>
+
+<!-- NAV MENU -->
+<nav>
+    <a href="index.html">Home</a>
+    <a href="landscapes.html">Landscapes</a>
+    <a href="seniors.html">Senior Portraits</a>
+    <a href="realestate.html">Real Estate</a>
+    <a href="events.html">Events</a>
+</nav>
+
+<!-- BANNER IMAGE -->
+<div class="banner">
+</div>
+
+<!-- HEADER -->
+<header>
+    <h1 class="banner-title">Megan Tucker Photography</h1>
+</header>
+
+<!-- ABOUT ME TEXT -->
+<section class="about">
+    <div class="about-left">
+        <p>
+            My name is Megan Tucker. I am a Massachusetts-based photographer specializing in
+            landscapes, senior portraits, real estate, and travel photography.
+            <br><br>
+            This portfolio showcases some of my favorite work from over 10 years of shooting. I have photographed clients across New England and have experience shooting events, commercial content, and creative projects. I am also a FAA Part 107 certified drone pilot, allowing me to capture aerial perspectives with my drone.
+        </p>
+    </div>
+
+    <div class="about-right">
+        <p>
+            I am available to shoot portraits, events, or real estate photos for hire. For inquiries, please email me at
+            <a href="mailto:mtucker1004@gmail.com">mtucker1004@gmail.com</a>.
+            <br><br>
+            To see my most up-to-date work, visit my Instagram:
+            <a href="https://instagram.com/flicsbymegan" target="_blank">@flicsbymegan</a>.
+        </p>
+    </div>
+</section>
+
+</section>
+
+<!-- 4-COLUMN IMAGE GRID -->
+<section class="grid">
+
+    <a class="grid-item" href="landscapes.html">
+        <img src=".idea/jpgs/landice.jpg" alt="Landscapes">
+        <div class="label">Landscapes</div>
+    </a>
+
+    <a class="grid-item" href="seniors.html">
+        <img src=".idea/jpgs/gradsit.jpg" alt="Senior Portraits">
+        <div class="label">Senior Portraits</div>
+    </a>
+
+    <a class="grid-item" href="realestate.html">
+        <img src=".idea/jpgs/realrooms.jpg" alt="Real Estate"/>
+        <div class="label">Real Estate</div>
+    </a>
+
+    <a class="grid-item" href="events.html">
+        <img src=".idea/jpgs/eventsfair.jpeg" alt="Events">
+        <div class="label">Events</div>
+    </a>
+
+</section>
+
+</body>
+</html>
