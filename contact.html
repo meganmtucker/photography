@@ -6,51 +6,39 @@
     <title>Contact | Megan Tucker Photography</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<style>
-    body {
-        margin: 0;
-        font-family: Tahoma, sans-serif;
-        background-color: #fff;
-        color: #222;
-    }
-
-    /* NAVBAR */
-    nav {
-        display: flex;
-        justify-content: center;
-        gap: 25px;
-        padding: 15px 0;
-        background-color: #fff;
-        border-bottom: 1px solid #ddd;
-        position: sticky;
-        top: 0;
-        z-index: 10;
-    }
-    nav a {
-        text-decoration: none;
-        font-weight: bold;
-        color: #333;
-        font-size: 16px;
-    }
-    nav a:hover {
-        color: #777;
-    }
-    nav a.active {
-        color: #999;
-    }
-
-
-</style>
 
 <body>
-<nav>
+<nav class="desktop-nav">
     <a href="index.html">Home</a>
     <a href="landscapes.html">Landscapes</a>
     <a href="seniors.html">Senior Portraits</a>
     <a href="realestate.html">Real Estate</a>
     <a href="events.html">Events</a>
-    <a href="contact.html" class="active">Contact</a>
+    <a href="contact.html"class="active">Contact</a>
 </nav>
+
+<!-- HEADER -->
+<header>
+    <!-- MOBILE NAV -->
+    <nav class="mobile-nav">
+        <div class="nav-header">
+            <div class="mobile-nav-header">
+                <div class="mobile-nav-left">
+                    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+                    <span class="mobile-logo">Megan Tucker Photography</span>
+                </div>
+            </div>
+
+        </div>
+        <div class="mobile-links" id="mobileLinks">
+            <a href="index.html">Home</a>
+            <a href="landscapes.html">Landscapes</a>
+            <a href="seniors.html" >Senior Portraits</a>
+            <a href="realestate.html">Real Estate</a>
+            <a href="events.html">Events</a>
+            <a href="contact.html"class="active">Contact</a>
+        </div>
+    </nav>
 
 
 <main class="contact-container">
@@ -118,6 +106,53 @@
             <button type="submit" class="contact-btn">Send Message</button>
         </form>
     </div>
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox" onclick="closeLightbox(event)">
+        <div class="lightbox-content">
+            <button class="close-btn" onclick="closeLightbox(event)">×</button>
+            <img id="lightbox-img" src="" alt="">
+            <div class="lightbox-caption" id="lightbox-caption"></div>
+        </div>
+    </div>
+
+    <script>
+        function openLightbox(item) {
+            const img = item.querySelector('img');
+            document.getElementById('lightbox-img').src = img.src;
+            document.getElementById('lightbox-caption').textContent = img.dataset.caption || '';
+            document.querySelector('.lightbox').style.display = 'flex';
+
+            // Hide nav menus
+            const desktopNav = document.querySelector('nav');
+            const mobileNav = document.querySelector('.mobile-nav');
+            desktopNav.classList.add('nav-hidden');
+            mobileNav.classList.add('nav-hidden');
+        }
+
+        function closeLightbox(event) {
+            // Only close if clicking the background OR clicking the X button
+            if (event.target.classList.contains('lightbox') || event.target.classList.contains('close-btn')) {
+                document.querySelector('.lightbox').style.display = 'none';
+
+                // Show nav menus again
+                const desktopNav = document.querySelector('nav');
+                const mobileNav = document.querySelector('.mobile-nav');
+                desktopNav.classList.remove('nav-hidden');
+                mobileNav.classList.remove('nav-hidden');
+            }
+        }
+
+        function toggleMenu() {
+            const links = document.getElementById('mobileLinks');
+            if (links.style.display === "flex") {
+                links.style.display = "none";
+            } else {
+                links.style.display = "flex";
+            }
+        }
+    </script>
+
 </main>
 <footer style="text-align:center; padding:40px 0; color:#555; font-size:14px;">
     © 2025 Megan Tucker Photography — All Rights Reserved
