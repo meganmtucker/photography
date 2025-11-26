@@ -4,180 +4,44 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Real Estate | Megan Tucker Photography</title>
-    <link rel="stylesheet" href="css/style.css">
-    <style>
-        body {
-            margin: 0;
-            font-family: Tahoma, sans-serif;
-            background-color: #fff;
-            color: #222;
-        }
+    <link rel="stylesheet" href="style.css">
 
-        /* NAVBAR */
-        nav {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            padding: 15px 0;
-            background-color: #fff;
-            border-bottom: 1px solid #ddd;
-            position: sticky;
-            top: 0;
-            z-index: 10;
-        }
-        nav a {
-            text-decoration: none;
-            font-weight: bold;
-            color: #333;
-            font-size: 16px;
-        }
-        nav a:hover {
-            color: #777;
-        }
-        nav a.active {
-            color: #000;
-        }
-
-        /* MASONRY GRID */
-        .masonry {
-            column-count: 3;
-            column-gap: 15px;
-            padding: 20px;
-        }
-
-        /* Single item */
-        .masonry-item {
-            break-inside: avoid;
-            margin-bottom: 15px;
-            cursor: pointer;
-            position: relative;
-        }
-
-        .masonry-item img {
-            width: 100%;
-            display: block;
-            border-radius: 8px;
-            transition: transform 0.3s ease;
-        }
-
-        .masonry-item img:hover {
-            transform: scale(1.03);
-        }
-
-        /* LIGHTBOX OVERLAY */
-        .lightbox {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.85);
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-            padding: 20px;
-            box-sizing: border-box;
-            overflow: auto;
-        }
-
-        /* WHITE BOX CONTAINER (image + caption) */
-        .lightbox-content {
-            display: flex;
-            flex-direction: row;
-            gap: 20px;
-            background: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            max-width: 90vw;
-            max-height: 90vh;
-            box-sizing: border-box;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-        }
-
-        /* IMAGE INSIDE BOX */
-        .lightbox-content img {
-            max-width: calc(100% - 320px);
-            max-height: calc(90vh - 40px);
-            width: auto;
-            height: auto;
-            object-fit: contain;
-            border-radius: 8px;
-            display: block;
-        }
-
-        /* CAPTION */
-        .lightbox-caption {
-            width: 300px;
-            font-size: 18px;
-            color: #222;
-            text-align: left;
-            overflow-wrap: break-word;
-        }
-
-        /* MOBILE: stack image + caption */
-        @media (max-width: 768px) {
-            .lightbox-content {
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                max-width: 90vw;
-                max-height: 90vh;
-            }
-
-            .lightbox-content img {
-                max-width: 90vw;
-                max-height: calc(90vh - 100px);
-            }
-
-            .lightbox-caption {
-                width: 100%;
-                margin-top: 10px;
-                text-align: right;
-            }
-        }
-        .lightbox-content {
-    position: relative; /* required for the button placement */
-}
-
-.close-btn {
-    position: absolute;
-    top: 12px;
-    right: 12px;
-    background-color: #e5e5e5;
-    color: #555;
-    border: none;
-    border-radius: 50%;
-    width: 32px;
-    height: 32px;
-    font-size: 22px;
-    font-weight: bold;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.2s ease, color 0.2s ease;
-}
-
-.close-btn:hover {
-    background-color: #d0d0d0;
-    color: #222;
-}
-
-    </style>
 </head>
 <body>
 
 <!-- NAV MENU -->
-<nav>
+<nav class="desktop-nav">
     <a href="index.html">Home</a>
     <a href="landscapes.html">Landscapes</a>
     <a href="seniors.html">Senior Portraits</a>
     <a href="realestate.html" class="active">Real Estate</a>
     <a href="events.html">Events</a>
+    <a href="contact.html">Contact</a>
 </nav>
+
+<!-- HEADER -->
+<header>
+    <!-- MOBILE NAV -->
+    <nav class="mobile-nav">
+        <div class="nav-header">
+            <div class="mobile-nav-header">
+                <div class="mobile-nav-left">
+                    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+                    <span class="mobile-logo">Megan Tucker Photography</span>
+                </div>
+            </div>
+
+        </div>
+        <div class="mobile-links" id="mobileLinks">
+            <a href="index.html">Home</a>
+            <a href="landscapes.html">Landscapes</a>
+            <a href="seniors.html">Senior Portraits</a>
+            <a href="realestate.html" class="active">Real Estate</a>
+            <a href="events.html">Events</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
 
 <!-- MASONRY GRID -->
 <section class="masonry">
@@ -234,35 +98,56 @@
 </section>
 
 <!-- LIGHTBOX -->
-<div class="lightbox" onclick="closeLightbox(event)">
-    <div class="lightbox-content">
-        <button class="close-btn" onclick="closeLightbox(event)">×</button>
-        <img id="lightbox-img" src="" alt="">
-        <div class="lightbox-caption" id="lightbox-caption"></div>
+    <div class="lightbox" onclick="closeLightbox(event)">
+        <div class="lightbox-content">
+            <button class="close-btn" onclick="closeLightbox(event)">×</button>
+            <img id="lightbox-img" src="" alt="">
+            <div class="lightbox-caption" id="lightbox-caption"></div>
+        </div>
     </div>
-</div>
 
-<script>
-    function openLightbox(item) {
-        const img = item.querySelector('img');
-        document.getElementById('lightbox-img').src = img.src;
-        document.getElementById('lightbox-caption').textContent = img.dataset.caption || '';
-        document.querySelector('.lightbox').style.display = 'flex';
-    }
+    <script>
+        function openLightbox(item) {
+            const img = item.querySelector('img');
+            document.getElementById('lightbox-img').src = img.src;
+            document.getElementById('lightbox-caption').textContent = img.dataset.caption || '';
+            document.querySelector('.lightbox').style.display = 'flex';
 
-    function closeLightbox(event) {
-        // Only close if clicking the background OR clicking the X button
-        if (event.target.classList.contains('lightbox') || event.target.classList.contains('close-btn')) {
-            document.querySelector('.lightbox').style.display = 'none';
+            // Hide nav menus
+            const desktopNav = document.querySelector('nav');
+            const mobileNav = document.querySelector('.mobile-nav');
+            desktopNav.classList.add('nav-hidden');
+            mobileNav.classList.add('nav-hidden');
         }
-    }
-</script>
 
-    <footer style="text-align:center; padding:40px 0; color:#555; font-size:14px;">
+        function closeLightbox(event) {
+            // Only close if clicking the background OR clicking the X button
+            if (event.target.classList.contains('lightbox') || event.target.classList.contains('close-btn')) {
+                document.querySelector('.lightbox').style.display = 'none';
+
+                // Show nav menus again
+                const desktopNav = document.querySelector('nav');
+                const mobileNav = document.querySelector('.mobile-nav');
+                desktopNav.classList.remove('nav-hidden');
+                mobileNav.classList.remove('nav-hidden');
+            }
+        }
+
+        function toggleMenu() {
+            const links = document.getElementById('mobileLinks');
+            if (links.style.display === "flex") {
+                links.style.display = "none";
+            } else {
+                links.style.display = "flex";
+            }
+        }
+    </script>
+<footer style="text-align:center; padding:40px 0; color:#555; font-size:14px;">
     © 2025 Megan Tucker Photography — All Rights Reserved
 </footer>
 </body>
 </html>
+
 
 
 
