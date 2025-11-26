@@ -138,6 +138,33 @@
                 text-align: right;
             }
         }
+        .lightbox-content {
+    position: relative; /* required for the button placement */
+}
+
+.close-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background-color: #e5e5e5;
+    color: #555;
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.close-btn:hover {
+    background-color: #d0d0d0;
+    color: #222;
+}
     </style>
 </head>
 <body>
@@ -222,6 +249,7 @@
 <!-- LIGHTBOX -->
 <div class="lightbox" onclick="closeLightbox(event)">
     <div class="lightbox-content">
+        <button class="close-btn" onclick="closeLightbox(event)">×</button>
         <img id="lightbox-img" src="" alt="">
         <div class="lightbox-caption" id="lightbox-caption"></div>
     </div>
@@ -236,14 +264,19 @@
     }
 
     function closeLightbox(event) {
-        if (event.target.classList.contains('lightbox')) {
+        // Only close if clicking the background OR clicking the X button
+        if (event.target.classList.contains('lightbox') || event.target.classList.contains('close-btn')) {
             document.querySelector('.lightbox').style.display = 'none';
         }
     }
 </script>
 
+    <footer style="text-align:center; padding:40px 0; color:#555; font-size:14px;">
+    © 2025 Megan Tucker Photography — All Rights Reserved
+</footer>
 </body>
 </html>
+
 
 
 
