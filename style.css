@@ -357,16 +357,16 @@ nav a.active {
 
 /* MASONRY GRID */
 .masonry {
-    column-count: 3;
+    column-count: 3; /* desktop default */
     column-gap: 15px;
     padding: 20px;
 }
-/* Mobile: 2-column .grid, scroll down only */
+
+/* MOBILE: 2-column masonry */
 @media (max-width: 768px) {
-    .grid {
-        grid-template-columns: 1fr 1fr; /* 2 columns */
-        gap: 15px;
-        padding: 10px 20px 40px;
+    .masonry {
+        column-count: 2;
+        column-gap: 15px;
     }
 }
     .masonry-item {
@@ -532,12 +532,6 @@ nav a:hover {
 }
 
 
-/* MASONRY GRID */
-.masonry {
-    column-count: 3;
-    column-gap: 15px;
-    padding: 20px;
-}
 
 /* Single item */
 .masonry-item {
