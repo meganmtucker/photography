@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Megan Tucker Photography</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    body {
+        margin: 0;
+        font-family: Tahoma, sans-serif;
+        background-color: #fff;
+        color: #222;
+    }
+
+    /* NAVBAR */
+    nav {
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+        padding: 15px 0;
+        background-color: #fff;
+        border-bottom: 1px solid #ddd;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+    }
+    nav a {
+        text-decoration: none;
+        font-weight: bold;
+        color: #333;
+        font-size: 16px;
+    }
+    nav a:hover {
+        color: #777;
+    }
+    nav a.active {
+        color: #999;
+    }
+
+
+</style>
+
+<body>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="landscapes.html">Landscapes</a>
+    <a href="seniors.html">Senior Portraits</a>
+    <a href="realestate.html">Real Estate</a>
+    <a href="events.html">Events</a>
+    <a href="contact.html" class="active">Contact</a>
+</nav>
+
+
+<main class="contact-container">
+    <!-- LEFT SIDE: Photo + links -->
+    <div class="contact-left">
+        <img src="jpgs/headshot.jpg" alt="Photo of Megan" class="contact-photo">
+
+        <div class="contact-links">
+            <h3>Connect with me</h3>
+
+            <p><a href="mailto:mtucker1004@gmail.com" target=”_blank”
+                  style="
+        display:inline-block;
+        margin-top:20px;
+        padding:12px 24px;
+        background:#333;
+        color:white;
+        text-decoration:none;
+        border-radius:6px;
+        font-size:16px;
+        transition:0.3s;">mtucker1004@gmail.com</a></p>
+
+            <p><a href="https://instagram.com/flicsbymegan" target=”_blank”
+               style="
+        display:inline-block;
+        margin-top:20px;
+        padding:12px 24px;
+        background:#333;
+        color:white;
+        text-decoration:none;
+        border-radius:6px;
+        font-size:16px;
+        transition:0.3s;">Instagram</a></p>
+
+            <p><a href="https://www.linkedin.com/in/meganmtucker10/" target=”_blank”
+                  style="
+        display:inline-block;
+        margin-top:20px;
+        padding:12px 24px;
+        background:#333;
+        color:white;
+        text-decoration:none;
+        border-radius:6px;
+        font-size:16px;
+        transition:0.3s;">LinkedIn</a></p>
+
+        </div>
+    </div>
+
+    <!-- RIGHT SIDE: Form -->
+    <div class="contact-right">
+        <h2>Get in Touch</h2>
+        <p>If you'd like to book a shoot or have a question, send me a message below.</p>
+<br>
+        <form action="https://formspree.io/f/xnnkawdz" method="POST" class="contact-form">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="_replyto" required>
+
+            <label for="message">Inquiry</label>
+            <textarea id="message" name="message" rows="7" required></textarea>
+
+            <button type="submit" class="contact-btn">Send Message</button>
+        </form>
+    </div>
+</main>
+<footer style="text-align:center; padding:40px 0; color:#555; font-size:14px;">
+    © 2025 Megan Tucker Photography — All Rights Reserved
+</footer>
+</body>
+</html>
+
