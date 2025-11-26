@@ -1,0 +1,747 @@
+
+body {
+    margin: 0;
+    font-family: Tahoma, sans-serif;
+    background-color: #ffffff;
+    color: #222;
+}
+
+/* NAVBAR */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 15px 0;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+nav a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #333;
+    font-size: 16px;
+}
+nav a:hover {
+    color: #777;
+}
+nav a.active {
+    color: #999;
+}
+
+
+/* BANNER */
+.banner {
+    width: 100%;
+    height: 500px;
+    background-image: url("jpgs/landmountain.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    margin-bottom: 0px;
+}
+
+/* TEXT ON TOP OF BANNER */
+.banner-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 48px;
+    font-weight: bold;
+    text-shadow: 0 3px 10px rgba(0,0,0,0.6);
+    margin: 0;
+    padding: 0 20px;
+    text-align: center;
+    width: 100%;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    padding: 40px 10px;
+}
+
+
+/* ABOUT ME */
+.about {
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.about a {
+    color: #3366cc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.about a:hover {
+    text-decoration: underline;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .about {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* 4 COLUMN GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 10px 40px 60px;
+}
+
+.grid-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+    aspect-ratio: 4 / 3;
+}
+
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.grid-item:hover img {
+    transform: scale(1.03);
+}
+
+.grid-item .label {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    padding: 8px 12px;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+/* LIGHTBOX OVERLAY */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.85);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+/* WHITE BOX CONTAINER */
+.lightbox-content {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 90vw;
+    max-height: 90vh;       /* total lightbox height capped */
+    box-sizing: border-box;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+}
+
+/* IMAGE SIZES - FIT INSIDE WHITE BOX */
+.lightbox-content img {
+    width: auto;
+    height: auto;
+    max-width: calc(100% - 320px);  /* leave space for caption */
+    max-height: 100%;
+    object-fit: contain;  /* scale proportionally */
+    border-radius: 8px;
+    display: block;
+}
+
+/* CAPTION */
+.lightbox-caption {
+    width: 300px;
+    font-size: 20px;
+    color: #222;
+    overflow-wrap: break-word;
+}
+
+/* MOBILE: stack image + caption */
+@media (max-width: 768px) {
+    .lightbox-content {
+        flex-direction: column;
+        max-width: 90vw;
+        max-height: 90vh;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .lightbox-content img {
+        max-width: 90vw;
+        max-height: 50vh;
+    }
+
+    .lightbox-caption {
+        width: 100%;
+        margin-top: 10px;
+        text-align: center;
+    }
+}
+/* MOBILE NAV ONLY */
+.mobile-nav {
+    display: none; /* hide on desktop */
+    flex-direction: column;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.nav-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+}
+
+.hamburger {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.nav-title {
+    font-weight: bold;
+    font-size: 16px;
+}
+/* dropdown links hidden by default */
+.mobile-links {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 20px 10px 20px;
+}
+
+.mobile-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 10px 0;
+}
+
+.mobile-links a:hover {
+    color: #777;
+}
+
+/* Show mobile nav on small screens */
+@media (max-width: 768px) {
+    .mobile-nav {
+        display: flex;
+    }
+
+    /* Hide desktop nav on mobile */
+    @media (max-width: 768px) {
+        .desktop-nav {
+            display: none;
+        }
+    }
+}
+/* Mobile nav only */
+@media (max-width: 768px) {
+    .mobile-nav {
+        position: sticky;
+        display: flex;
+        top: 0;
+        width: 100%;
+        background-color: #fff;
+        border-bottom: 1px solid #ddd;
+        z-index: 99999; /* stays on top */
+    }
+
+    .mobile-nav-header {
+        display: flex;
+        justify-content: flex-start; /* align left */
+        align-items: center;
+        padding: 8px 15px;
+    }
+    .mobile-nav-left {
+        display: flex;
+        align-items: center;
+        gap: 10px; /* space between icon and text */
+    }
+
+    .hamburger {
+        font-size: 28px;
+        cursor: pointer;
+    }
+
+    .mobile-logo {
+        font-weight: bold;
+        font-size: 18px;
+    }
+
+    .mobile-nav-links {
+        display: none;
+        flex-direction: column;
+        padding: 10px 20px;
+    }
+
+    .mobile-nav-links a {
+        padding: 10px 0;
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+    }
+}
+
+
+/* Toggle menu visibility */
+.mobile-nav-links.show {
+    display: flex;
+}
+
+
+/* STYLE for OTHER PAGES */
+body {
+    margin: 0;
+    font-family: Tahoma, sans-serif;
+    background-color: #fff;
+    color: #222;
+}
+
+/* NAVBAR */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 15px 0;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+nav a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #333;
+    font-size: 16px;
+}
+nav a:hover {
+    color: #777;
+}
+nav a.active {
+    color: #999;
+}
+
+/* MASONRY GRID */
+.masonry {
+    column-count: 3;
+    column-gap: 15px;
+    padding: 20px;
+}
+/* Mobile: 2-column .grid, scroll down only */
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr 1fr; /* 2 columns */
+        gap: 15px;
+        padding: 10px 20px 40px;
+    }
+}
+    .masonry-item {
+        width: 100%;
+        break-inside: avoid;
+        margin-bottom: 15px;
+    }
+
+    .masonry-item img {
+        width: 100%;
+        height: auto;
+    }
+
+
+/* Single item */
+.masonry-item {
+    break-inside: avoid;
+    margin-bottom: 15px;
+    cursor: pointer;
+    position: relative;
+}
+
+.masonry-item img {
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.masonry-item img:hover {
+    transform: scale(1.03);
+}
+
+/* LIGHTBOX OVERLAY */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.85);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+/* WHITE BOX CONTAINER (image + caption) */
+.lightbox-content {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 90vw;
+    max-height: 90vh;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* IMAGE INSIDE BOX */
+.lightbox-content img {
+    max-width: calc(100% - 320px);
+    max-height: calc(90vh - 40px);
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+    display: block;
+}
+
+/* CAPTION */
+.lightbox-caption {
+    width: 300px;
+    font-size: 18px;
+    color: #222;
+    text-align: left;
+    overflow-wrap: break-word;
+}
+
+/* MOBILE: stack image + caption */
+@media (max-width: 768px) {
+    .lightbox-content {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-width: 90vw;
+        max-height: 90vh;
+    }
+
+    .lightbox-content img {
+        max-width: 90vw;
+        max-height: calc(90vh - 100px);
+    }
+
+    .lightbox-caption {
+        width: 100%;
+        margin-top: 10px;
+        text-align: right;
+    }
+}
+.lightbox-content {
+    position: relative; /* required for the button placement */
+}
+
+.close-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background-color: #e5e5e5;
+    color: #555;
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.close-btn:hover {
+    background-color: #d0d0d0;
+    color: #222;
+}
+
+body {
+    margin: 0;
+    font-family: Tahoma, sans-serif;
+    background-color: #fff;
+    color: #222;
+}
+
+/* NAVBAR */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 15px 0;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+nav a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #333;
+    font-size: 16px;
+}
+nav a:hover {
+    color: #777;
+}
+
+
+/* MASONRY GRID */
+.masonry {
+    column-count: 3;
+    column-gap: 15px;
+    padding: 20px;
+}
+
+/* Single item */
+.masonry-item {
+    break-inside: avoid;
+    margin-bottom: 15px;
+    cursor: pointer;
+    position: relative;
+}
+
+.masonry-item img {
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.masonry-item img:hover {
+    transform: scale(1.03);
+}
+
+/* LIGHTBOX OVERLAY */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.85);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: auto; /* allow scroll if viewport is small */
+}
+
+/* WHITE BOX CONTAINER (image + caption) */
+.lightbox-content {
+    display: flex;
+    flex-direction: row;  /* side by side on desktop */
+    gap: 20px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 90vw;
+    max-height: 90vh;
+    box-sizing: border-box;
+    align-items: center;  /* vertical center */
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* IMAGE INSIDE BOX */
+.lightbox-content img {
+    max-width: calc(100% - 320px); /* leave space for caption */
+    max-height: calc(90vh - 40px); /* subtract top + bottom padding */
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+    display: block;
+}
+
+/* CAPTION */
+.lightbox-caption {
+    width: 300px;
+    font-size: 18px;
+    color: #222;
+    text-align: left;
+    overflow-wrap: break-word;
+}
+
+/* MOBILE: stack image + caption */
+@media (max-width: 768px) {
+    .lightbox-content {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-width: 90vw;
+        max-height: 90vh;
+    }
+
+    .lightbox-content img {
+        max-width: 90vw;
+        max-height: calc(90vh - 100px); /* leave padding + caption space */
+    }
+
+    .lightbox-caption {
+        width: 100%;
+        margin-top: 10px;
+        text-align: right;
+    }
+}
+.lightbox-content {
+    position: relative; /* required for the button placement */
+}
+
+.close-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background-color: #e5e5e5;
+    color: #555;
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.close-btn:hover {
+    background-color: #d0d0d0;
+    color: #222;
+}
+
+/* CONTACT PAGE */
+
+.contact-container {
+    display: flex;
+    max-width: 1100px;
+    margin: 80px auto;
+    gap: 40px;
+    padding: 0 20px;
+}
+
+.contact-left {
+    flex: 1;
+    text-align: center;
+}
+
+.contact-photo {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.contact-links h3 {
+    margin-bottom: 10px;
+}
+
+.contact-links a {
+    color: #555;
+    text-decoration: none;
+}
+
+.contact-links a:hover {
+    text-decoration: underline;
+}
+
+.contact-right {
+    flex: 1.2;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    width: 100%;
+}
+
+.contact-btn {
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 24px;
+    background:#333;
+    color:white;
+    text-decoration:none;
+    border-radius:6px;
+    font-size:16px;
+    transition:0.3s;"
+font-family: Tahoma, sans-serif;
+}
+
+.contact-btn:hover {
+    background: #333;
+}
+
+/* MOBILE */
+@media (max-width: 800px) {
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+.nav-hidden {
+    display: none !important;
+}
+
+
