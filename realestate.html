@@ -143,38 +143,13 @@
             }
         }
     </script>
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-    const images = document.querySelectorAll('.masonry-item img');
-
-    // Store original src in data-src if not already
-    images.forEach(img => {
-        if (!img.dataset.src) {
-            img.dataset.src = img.src;
-            img.src = ''; // optional: start with empty to force lazy load
-        }
-    });
-
-    // IntersectionObserver for lazy loading
-    const observer = new IntersectionObserver((entries, obs) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const img = entry.target;
-                img.src = img.dataset.src; // load image
-                obs.unobserve(img);
-            }
-        });
-    }, { rootMargin: "100px" }); // load a bit before it comes into view
-
-    images.forEach(img => observer.observe(img));
-});
-</script>
     
 <footer style="text-align:center; padding:40px 0; color:#555; font-size:14px;">
     © 2025 Megan Tucker Photography — All Rights Reserved
 </footer>
 </body>
 </html>
+
 
 
 
