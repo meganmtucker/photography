@@ -369,16 +369,16 @@ nav a.active {
         column-gap: 15px;
     }
 }
-    .masonry-item {
-        width: 100%;
-        break-inside: avoid;
-        margin-bottom: 15px;
-    }
+.masonry-item {
+    width: 100%;
+    break-inside: avoid;
+    margin-bottom: 15px;
+}
 
-    .masonry-item img {
-        width: 100%;
-        height: auto;
-    }
+.masonry-item img {
+    width: 100%;
+    height: auto;
+}
 
 /* Single item */
 .masonry-item {
@@ -514,7 +514,7 @@ nav {
     justify-content: center;
     gap: 25px;
     padding: 15px 0;
-    background-color: #fff;
+    background-color: #f2f2f2;
     border-bottom: 1px solid #ddd;
     position: sticky;
     top: 0;
@@ -736,8 +736,6 @@ font-family: Tahoma, sans-serif;
 .nav-hidden {
     display: none !important;
 }
-
-
 
 
 
