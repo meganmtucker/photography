@@ -41,6 +41,7 @@ nav a.active {
     background-position: center;
     position: relative;
     margin-bottom: 0px;
+    clip-path: inset(30px 0 0 0);
 }
 
 /* TEXT ON TOP OF BANNER */
@@ -69,11 +70,22 @@ header {
 /* ABOUT ME */
 .about {
     max-width: 1100px;
-    margin: 20px auto;
+    margin: 10px;
     padding: 0 20px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: left;
+}
+.about2 {
+    max-width: 1100px;
+    margin: 10px;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
     font-size: 18px;
     line-height: 1.6;
     text-align: left;
@@ -96,12 +108,19 @@ header {
     }
 }
 
-/* 4 COLUMN GRID */
+/* 2 COLUMN GRID */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 20px;
     padding: 10px 40px 60px;
+}
+
+/* Desktop 2-column layout */
+@media (min-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 .grid-item {
@@ -212,7 +231,7 @@ header {
 .mobile-nav {
     display: none; /* hide on desktop */
     flex-direction: column;
-    background-color: #f2f2f2;
+    background-color: #fff;
     border-bottom: 1px solid #ddd;
     position: sticky;
     top: 0;
@@ -274,7 +293,7 @@ header {
         display: flex;
         top: 0;
         width: 100%;
-        background-color: #f2f2f2;
+        background-color: #fff;
         border-bottom: 1px solid #ddd;
         z-index: 99999; /* stays on top */
     }
@@ -774,6 +793,5 @@ font-family: Tahoma, sans-serif;
     opacity: 1;
     transform: scale(1.1);
 }
-
 
 
