@@ -120,6 +120,19 @@
         <!-- Add more images here -->
     </section>
 
+    <p> <a href="contact.html" target=”_blank”
+         style="
+        display:inline-block;
+        margin-top:20px;
+        padding:12px 24px;
+        background:#333;
+        color:white;
+        text-decoration:none;
+        border-radius:6px;
+        font-weight:bold;
+        font-size:16px;
+        transition:0.3s;">Book a Shoot</a></p>
+
     <!-- LIGHTBOX -->
     <div class="lightbox" onclick="closeLightbox(event)">
         <div class="lightbox-content">
@@ -129,44 +142,65 @@
         </div>
     </div>
 
+    <button id="lightbox-next" class="lightbox-info-btn" onclick="nextPhoto()">next ›</button>
+    <button id="lightbox-next-left" class="lightbox-info-btn" onclick="prevPhoto()">‹ back</button>
+
     <script>
+
+        let galleryImages = Array.from(document.querySelectorAll('.masonry-item'));
+        let currentIndex = 0;
+
         function openLightbox(item) {
             const img = item.querySelector('img');
             document.getElementById('lightbox-img').src = img.src;
-            document.getElementById('lightbox-caption').textContent = img.dataset.caption || '';
+            document.getElementById('lightbox-caption').innerHTML = img.dataset.caption || '';
             document.querySelector('.lightbox').style.display = 'flex';
 
+            // Show Next button
+            document.getElementById('lightbox-next').style.display = 'block';
+            document.getElementById('lightbox-next-left').style.display = 'block';
             // Hide nav menus
-            const desktopNav = document.querySelector('nav');
-            const mobileNav = document.querySelector('.mobile-nav');
-            desktopNav.classList.add('nav-hidden');
-            mobileNav.classList.add('nav-hidden');
+            document.querySelector('nav').classList.add('nav-hidden');
+            document.querySelector('.mobile-nav').classList.add('nav-hidden');
+
+            currentIndex = galleryImages.indexOf(item);
         }
 
         function closeLightbox(event) {
-            // Only close if clicking the background OR clicking the X button
             if (event.target.classList.contains('lightbox') || event.target.classList.contains('close-btn')) {
                 document.querySelector('.lightbox').style.display = 'none';
 
-                // Show nav menus again
-                const desktopNav = document.querySelector('nav');
-                const mobileNav = document.querySelector('.mobile-nav');
-                desktopNav.classList.remove('nav-hidden');
-                mobileNav.classList.remove('nav-hidden');
+                // Hide Next button
+                document.getElementById('lightbox-next').style.display = 'none'; // hide button
+                document.getElementById('lightbox-next-left').style.display = 'none'; // hide button
+                // Show nav menus
+                document.querySelector('nav').classList.remove('nav-hidden');
+                document.querySelector('.mobile-nav').classList.remove('nav-hidden');
             }
         }
 
-        function toggleMenu() {
-            const links = document.getElementById('mobileLinks');
-            if (links.style.display === "flex") {
-                links.style.display = "none";
-            } else {
-                links.style.display = "flex";
-            }
+        function nextPhoto() {
+            currentIndex++;
+            if (currentIndex >= galleryImages.length) currentIndex = 0;
+
+            const nextItem = galleryImages[currentIndex];
+            const nextImg = nextItem.querySelector('img');
+
+            document.getElementById('lightbox-img').src = nextImg.src;
+            document.getElementById('lightbox-caption').innerHTML = nextImg.dataset.caption || '';
         }
 
+        function prevPhoto() {
+            currentIndex--; // go to previous index
+            if (currentIndex < 0) currentIndex = galleryImages.length - 1; // loop to last image if at start
+
+            const prevItem = galleryImages[currentIndex];
+            const prevImg = prevItem.querySelector('img');
+
+            document.getElementById('lightbox-img').src = prevImg.src;
+            document.getElementById('lightbox-caption').innerHTML = prevImg.dataset.caption || '';
+        }
     </script>
-
     <footer class="site-footer">
         <div class="footer-left">
             © 2025 Megan Tucker Photography — All Rights Reserved
@@ -185,6 +219,7 @@
     </footer>
 </body>
 </html>
+
 
 
 
