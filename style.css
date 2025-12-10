@@ -177,7 +177,7 @@ header {
     flex-direction: row;
     gap: 20px;
     background: #fff;
-    padding: 20px;
+    padding: 15px;
     border-radius: 10px;
     max-width: 90vw;
     max-height: 90vh;       /* total lightbox height capped */
@@ -189,11 +189,11 @@ header {
 
 /* IMAGE SIZES - FIT INSIDE WHITE BOX */
 .lightbox-content img {
+    max-width: 80vw;    /* never exceed 90% of viewport width */
+    max-height: 80vh;   /* never exceed 90% of viewport height */
     width: auto;
     height: auto;
-    max-width: calc(100% - 320px);  /* leave space for caption */
-    max-height: 100%;
-    object-fit: contain;  /* scale proportionally */
+    object-fit: contain; /* keep aspect ratio */
     border-radius: 8px;
     display: block;
 }
@@ -439,7 +439,7 @@ nav a.active {
 .lightbox-content {
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    gap: 15px;
     background: #fff;
     padding: 20px;
     border-radius: 10px;
@@ -449,17 +449,6 @@ nav a.active {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-}
-
-/* IMAGE INSIDE BOX */
-.lightbox-content img {
-    max-width: calc(100% - 320px);
-    max-height: calc(90vh - 40px);
-    width: auto;
-    height: auto;
-    object-fit: contain;
-    border-radius: 8px;
-    display: block;
 }
 
 /* CAPTION */
@@ -593,7 +582,7 @@ nav a:hover {
     flex-direction: row;  /* side by side on desktop */
     gap: 20px;
     background: #fff;
-    padding: 20px;
+    padding: 15px;
     border-radius: 10px;
     max-width: 90vw;
     max-height: 90vh;
@@ -601,17 +590,6 @@ nav a:hover {
     align-items: center;  /* vertical center */
     justify-content: center;
     overflow: hidden;
-}
-
-/* IMAGE INSIDE BOX */
-.lightbox-content img {
-    max-width: calc(100% - 320px); /* leave space for caption */
-    max-height: calc(90vh - 40px); /* subtract top + bottom padding */
-    width: auto;
-    height: auto;
-    object-fit: contain;
-    border-radius: 8px;
-    display: block;
 }
 
 /* CAPTION */
@@ -867,5 +845,4 @@ font-family: Tahoma, sans-serif;
     background-color: #d0d0d0;
     color: #222;
 }
-
 
