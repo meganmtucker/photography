@@ -733,3 +733,22 @@ font-family: Helvetica;
     }
 }
 
+.video-section {
+    display: flex;              /* makes centering easy */
+    justify-content: center;    /* center horizontally */
+    margin: 40px 0;             /* spacing above/below */
+}
+
+.video-container {
+    width: 75%;                 /* video takes ~75% of page width */
+    max-width: 900px;           /* optional maximum width */
+    aspect-ratio: 16 / 9;       /* preserves YouTube’s common aspect ratio */
+}
+
+.video-container iframe {
+    width: 100%;                /* fill container */
+    height: 100%;               /* maintain aspect ratio */
+    border: none;
+    border-radius: 8px;         /* optional subtle rounding */
+}
+
