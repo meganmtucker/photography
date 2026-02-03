@@ -51,7 +51,7 @@
             <a href="contact.html">Contact</a>
         </div>
     </nav>
-</header>
+    </header>
 
 
     <!-- MASONRY GRID -->
@@ -117,6 +117,19 @@
         </div>
 
     </section>
+
+    <script>
+function toggleMenu() {
+  const links = document.getElementById('mobileLinks');
+  if (!links) return;
+
+  if (links.style.display === "flex") {
+    links.style.display = "none";
+  } else {
+    links.style.display = "flex";
+  }
+}
+</script>
 
      <!-- LIGHTBOX -->
 <div class="lightbox" onclick="closeLightbox(event)">
@@ -204,4 +217,3 @@
     </footer>
 </body>
 </html>
-
