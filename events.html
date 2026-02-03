@@ -1,9 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XW45ZFL71R"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XW45ZFL71R');
+</script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Events | Megan Tucker Photography</title>
+    <title>Real Estate | Megan Tucker Photography</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="favicon.png">
 
@@ -128,51 +137,73 @@
     </section>
 
     <!-- LIGHTBOX -->
-    <div class="lightbox" onclick="closeLightbox(event)">
-        <div class="lightbox-content">
-            <button class="close-btn" onclick="closeLightbox(event)">×</button>
-            <img id="lightbox-img" src="" alt="">
-            <div class="lightbox-caption" id="lightbox-caption"></div>
-        </div>
-    </div>
+<div class="lightbox" onclick="closeLightbox(event)">
+  <div class="lightbox-content">
+    <button class="close-btn" onclick="closeLightbox(event)">×</button>
+    <img id="lightbox-img" src="" alt="">
+    <div class="lightbox-caption" id="lightbox-caption"></div>
+  </div>
+</div>
+  <button id="lightbox-next" class="lightbox-info-btn" onclick="nextPhoto()">next ›</button>
+  <button id="lightbox-next-left" class="lightbox-info-btn" onclick="prevPhoto()">‹ back</button>
 
-    <script>
-        function openLightbox(item) {
-            const img = item.querySelector('img');
-            document.getElementById('lightbox-img').src = img.src;
-            document.getElementById('lightbox-caption').textContent = img.dataset.caption || '';
-            document.querySelector('.lightbox').style.display = 'flex';
+  <script>
 
-            // Hide nav menus
-            const desktopNav = document.querySelector('nav');
-            const mobileNav = document.querySelector('.mobile-nav');
-            desktopNav.classList.add('nav-hidden');
-            mobileNav.classList.add('nav-hidden');
-        }
+    let galleryImages = Array.from(document.querySelectorAll('.masonry-item'));
+    let currentIndex = 0;
 
-        function closeLightbox(event) {
-            // Only close if clicking the background OR clicking the X button
-            if (event.target.classList.contains('lightbox') || event.target.classList.contains('close-btn')) {
-                document.querySelector('.lightbox').style.display = 'none';
+    function openLightbox(item) {
+      const img = item.querySelector('img');
+      document.getElementById('lightbox-img').src = img.src;
+      document.getElementById('lightbox-caption').innerHTML = img.dataset.caption || '';
+      document.querySelector('.lightbox').style.display = 'flex';
 
-                // Show nav menus again
-                const desktopNav = document.querySelector('nav');
-                const mobileNav = document.querySelector('.mobile-nav');
-                desktopNav.classList.remove('nav-hidden');
-                mobileNav.classList.remove('nav-hidden');
-            }
-        }
+      // Show Next button
+      document.getElementById('lightbox-next').style.display = 'block';
+      document.getElementById('lightbox-next-left').style.display = 'block';
+      // Hide nav menus
+      document.querySelector('nav').classList.add('nav-hidden');
+      document.querySelector('.mobile-nav').classList.add('nav-hidden');
 
-        function toggleMenu() {
-            const links = document.getElementById('mobileLinks');
-            if (links.style.display === "flex") {
-                links.style.display = "none";
-            } else {
-                links.style.display = "flex";
-            }
-        }
+      currentIndex = galleryImages.indexOf(item);
+    }
 
-    </script>
+    function closeLightbox(event) {
+      if (event.target.classList.contains('lightbox') || event.target.classList.contains('close-btn')) {
+        document.querySelector('.lightbox').style.display = 'none';
+
+        // Hide Next button
+        document.getElementById('lightbox-next').style.display = 'none'; // hide button
+        document.getElementById('lightbox-next-left').style.display = 'none'; // hide button
+        // Show nav menus
+        document.querySelector('nav').classList.remove('nav-hidden');
+        document.querySelector('.mobile-nav').classList.remove('nav-hidden');
+      }
+    }
+
+    function nextPhoto() {
+      currentIndex++;
+      if (currentIndex >= galleryImages.length) currentIndex = 0;
+
+      const nextItem = galleryImages[currentIndex];
+      const nextImg = nextItem.querySelector('img');
+
+      document.getElementById('lightbox-img').src = nextImg.src;
+      document.getElementById('lightbox-caption').innerHTML = nextImg.dataset.caption || '';
+    }
+
+    function prevPhoto() {
+      currentIndex--; // go to previous index
+      if (currentIndex < 0) currentIndex = galleryImages.length - 1; // loop to last image if at start
+
+      const prevItem = galleryImages[currentIndex];
+      const prevImg = prevItem.querySelector('img');
+
+      document.getElementById('lightbox-img').src = prevImg.src;
+      document.getElementById('lightbox-caption').innerHTML = prevImg.dataset.caption || '';
+    }
+  </script>
+
 
     <footer class="site-footer">
         <div class="footer-left">
@@ -192,3 +223,9 @@
     </footer>
 </body>
 </html>
+
+
+
+
+
+
