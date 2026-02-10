@@ -110,13 +110,6 @@ header {
     padding: 10px 40px 60px;
 }
 
-/* GRIDLS — mobile */
-@media (max-width: 768px) {
-    .gridls {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns mobile */
-    }
-}
-
 
 /* 2 COLUMN GRID */
 .grid {
@@ -766,14 +759,54 @@ font-family: Helvetica;
     border-radius: 8px;         /* optional subtle rounding */
 }
 
-/* GRIDLS FINAL OVERRIDE */
-.gridls {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-}
-
+/* LS Homepage Grid - Mobile*/
 @media (max-width: 768px) {
     .gridls {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr; /* always 1 column */
+    }
+
+    .gridls > * {
+        width: 80%;   /* shrink items to % of container */
+        margin: 0 auto; /* center items */
+    }
+}
+
+/* Grid item styling for desktop */
+.grid-itemLSH {
+    justify-self: center;
+    align-self: center;
+    width: 50%;           /* default desktop width */
+    aspect-ratio: auto;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    display: block;
+}
+
+/* Image styling */
+.grid-itemLSH img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* Label styling (unchanged) */
+.grid-itemLSH .label {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    padding: 8px 12px;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+/* Mobile responsiveness: full width (95%) */
+@media (max-width: 768px) {
+    .grid-itemLSH {
+        width: 95%;
+        margin: 0 auto;   /* center horizontally */
     }
 }
