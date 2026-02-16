@@ -810,3 +810,90 @@ font-family: Helvetica;
         margin: 0 auto;   /* center horizontally */
     }
 }
+
+
+/*updates to about section*/
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.about-left img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.about-left h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+.about-right {
+  margin-top: 90px;
+}
+
+.about-right p {
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+.about-buttons {
+  display: flex;
+  gap: 20px;
+  margin-top: 15px;
+  justify-content: center; /* center on desktop */
+}
+.btn {
+  display: inline-block;
+  margin: 10px 10px 20px 0;
+  padding: 12px 24px;
+  background: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #555;
+}
+
+
+/* Mobile: move buttons below text */
+@media (max-width: 768px) {
+    .about {
+        display: flex;
+        flex-direction: column; /* stack left + right sections */
+        gap: 10px;
+    }
+    
+    .about-left,
+    .about-right {
+        margin-top: 5px;
+    }
+
+    .about-left h2 {
+    margin: 0;          
+    padding: 0;
+    line-height: 1.1;
+    text-align: center;
+}
+
+.about-left .about-photo {
+        margin-top: 10px;
+    }
+
+    .about-buttons
+        flex-direction: column;   
+        align-items: center;   
+        margin-top: 15px;     
+    }
+
+
+
