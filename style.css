@@ -812,7 +812,7 @@ font-family: Helvetica;
 }
 
 
-/*updates to about section*/
+/* test area*/
 .about {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -895,5 +895,43 @@ font-family: Helvetica;
         margin-top: 15px;     
     }
 
+    /* --------------------------------------- */
+/* GLOBAL MOBILE FIXES - prevent horizontal scroll for entire site */
+/* --------------------------------------- */
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden; /* prevent page from scrolling sideways */
+    box-sizing: border-box; /* include padding/borders in width calculations */
+}
 
+/* Make sure all containers and sections fit the viewport */
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+/* Images scale correctly */
+img:not(.social-icon img):not(.grid-item img){
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Grids / masonry / flex containers scale properly */
+.grid,
+.gridls,
+.masonry,
+.about,
+.contact-container,
+.video-container {
+    max-width: 100%;
+}
+
+/* Prevent long words / labels from overflowing */
+p, a, .label, .btn {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
 
