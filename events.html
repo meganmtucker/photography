@@ -2,25 +2,22 @@
 <html lang="en">
 <head>
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XW45ZFL71R"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-XW45ZFL71R');
-</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XW45ZFL71R"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XW45ZFL71R');
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Events | Megan Tucker Photography</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="favicon.png">
-
 </head>
 <body>
 
-<!-- NAV MENU -->
-<nav class="desktop-nav">
+<nav class="desktop-nav" id="desktopNav">
     <a href="index.html">Home</a>
     <a href="landscapeshome.html">Landscapes</a>
     <a href="seniors.html">Senior Portraits</a>
@@ -28,217 +25,115 @@
     <a href="events.html" class="active">Events</a>
     <a href="contact.html">Contact</a>
 </nav>
+<nav class="mobile-nav" id="mobileNav">
+    <div class="mobile-nav-header">
+        <span class="mobile-logo">Megan Tucker Photography</span>
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+    </div>
+    <div class="mobile-links" id="mobileLinks">
+        <a href="index.html">Home</a>
+        <a href="landscapeshome.html">Landscapes</a>
+        <a href="seniors.html">Senior Portraits</a>
+        <a href="realestate.html">Real Estate</a>
+        <a href="events.html" class="active">Events</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</nav>
 
-<!-- HEADER -->
-<header>
-    <!-- MOBILE NAV -->
-    <nav class="mobile-nav">
-        <div class="nav-header">
-            <div class="mobile-nav-header">
-                <div class="mobile-nav-left">
-                    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
-                    <span class="mobile-logo">Megan Tucker Photography</span>
-                </div>
-            </div>
+<section class="hero">
+    <div class="hero-bg" style="background-image: url('jpgs/eventsfair.jpeg'); background-position: center 30%;"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <span class="hero-eyebrow">Portfolio</span>
+        <h1 class="hero-title"><em>Events</em></h1>
+        <p class="hero-subtitle">Campus &nbsp;·&nbsp; Community &nbsp;·&nbsp; Commercial</p>
+    </div>
+    <div class="hero-scroll"><div class="scroll-line"></div><span>Scroll</span></div>
+</section>
 
-        </div>
-        <div class="mobile-links" id="mobileLinks">
-            <a href="index.html">Home</a>
-            <a href="landscapeshome.html">Landscapes</a>
-            <a href="seniors.html">Senior Portraits</a>
-            <a href="realestate.html">Real Estate</a>
-            <a href="events.html" class="active">Events</a>
-            <a href="contact.html">Contact</a>
-        </div>
-    </nav>
-
-    <!-- MASONRY GRID -->
-    <section class="masonry">
-        <div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/eventsfair.jpeg" alt="College Activities Fair" data-caption="Bentley University Activites Fair" loading="lazy" width="1920" height="1440">
-        </div>
-        <div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/eventsgphi.jpeg" alt="College Activities Fair" data-caption="Bentley University Activities Fair" loading="lazy" width="1920" height="1280">
-        </div>
-
-        <div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/eventshair.jpeg" alt="Hair Shaving" data-caption="Hair Shaving Fundraiser Event" loading="lazy" width="1280" height="1920">
-        </div>
-
-        <div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/eventskick.jpeg" alt="Kickball Fundraiser" data-caption="Kickball Fundraiser" loading="lazy" width="1280" height="1920">
-        </div>
-
-        <div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/eventsminecraft.jpeg" alt="Paint Night" data-caption="Minecraft-themed Paint Night" loading="lazy" width="1280" height="1920">
-        </div>
-
-        <div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/eventsscore.jpeg" alt="Kickball Fundraiser" data-caption="Kickball Fundraiser" loading="lazy" width="1280" height="1207">
-        </div>
-        
-        <div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/eventsserve.jpeg" alt="Food Serving Event" data-caption="Food Serving Event" loading="lazy" width="1280" height="1920">
-        </div>
-
-        <div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/gphi2.JPG" alt="Sorority Event" data-caption="Sorority Event" loading="lazy" width="1536" height="1920">
-        </div>
-    
-        <div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/eventskd.JPG" alt="Sorority Formal Pictures" data-caption="Sorority Formal Pictures" loading="lazy" width="1920" height="1280">
-        </div>
-
-        <div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/eventsmerch.JPG" alt="Sorority Merch Photoshoot" data-caption="Sorority Merch Photoshoot" loading="lazy" width="1076" height="1364">
-        </div>
-
-        <div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/eventspaint.JPG" alt="Paint Night" data-caption="Paint Night" loading="lazy" width="1280" height="1920">
-        </div>
-
-        <div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/gphi3.JPG" alt="Sorority Event" data-caption="Sorority Event" loading="lazy" width="1451" height="1920">
-        </div>
-
-        <div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/eventsfood.JPG" alt="Food Serving Event" data-caption="Food Serving Event" loading="lazy" width="1280" height="1920">
-        </div>
-        <div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/gphi4.JPG" alt="Sorority Event" data-caption="Sorority Event" loading="lazy" width="1471" height="989">
-        </div>
-        
-        <div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/eventsformal.JPG" alt="Sorority Formal Pictures" data-caption="Sorority Formal Pictures" loading="lazy" width="1920" height="1280">
-        </div>
-
-        <div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/eventsshabbat.JPG" alt="Shabbat Dinner" data-caption="Shabbat Dinner" loading="lazy" width="1280" height="1920">
-        </div>
-
-        <div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/eventsshop.JPG" alt="Popup Art Market" data-caption="Popup Art Market" loading="lazy" width="1280" height="1920">
-        </div>
-        <div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/eventssmile.JPG" alt="Popup Food Event" data-caption="Popup Food Event" loading="lazy" width="1280" height="1920">
-        </div>
-
-        <div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/gphi1.JPG" alt="Sorority Event" data-caption="Sorority Event" loading="lazy" width="1278" height="1920">
-        </div>
-
-        <div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/eventsmocktail.JPG" alt="Mocktail Night" data-caption="Mocktail Night" loading="lazy" width="1280" height="1920">
-        </div>
-        
-
-
-        <!-- Add more images here -->
-    </section>
-
-    <script>
-function toggleMenu() {
-  const links = document.getElementById('mobileLinks');
-  if (!links) return;
-
-  if (links.style.display === "flex") {
-    links.style.display = "none";
-  } else {
-    links.style.display = "flex";
-  }
-}
-</script>
-
-    <!-- LIGHTBOX -->
-<div class="lightbox" onclick="closeLightbox(event)">
-  <div class="lightbox-content">
-    <button class="close-btn" onclick="closeLightbox(event)">×</button>
-    <img id="lightbox-img" src="" alt="">
-    <div class="lightbox-caption" id="lightbox-caption"></div>
-  </div>
+<div class="gallery-section">
+    <div class="masonry">
+        <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/eventsfair.jpeg" alt="Events" data-caption="<b>Bentley University Activities Fair</b>" data-meta="Canon" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Activities Fair</span></div></div>
+        <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/eventsgphi.jpeg" alt="Events" data-caption="<b>Bentley University Activities Fair</b>" data-meta="Canon" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Activities Fair</span></div></div>
+        <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/eventshair.jpeg" alt="Events" data-caption="<b>Hair Shaving Fundraiser</b>" data-meta="Canon" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Fundraiser</span></div></div>
+        <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/eventskick.jpeg" alt="Events" data-caption="<b>Kickball Fundraiser</b>" data-meta="Canon" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Kickball Fundraiser</span></div></div>
+        <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/eventsminecraft.jpeg" alt="Events" data-caption="<b>Minecraft-Themed Paint Night</b>" data-meta="Canon" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Paint Night</span></div></div>
+        <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/eventsscore.jpeg" alt="Events" data-caption="<b>Kickball Fundraiser</b>" data-meta="Canon" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Kickball Fundraiser</span></div></div>
+        <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/eventsserve.jpeg" alt="Events" data-caption="<b>Food Serving Event</b>" data-meta="Canon" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Food Serving</span></div></div>
+        <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/gphi2.JPG" alt="Events" data-caption="<b>Sorority Event</b>" data-meta="Canon" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Sorority Event</span></div></div>
+        <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/eventskd.JPG" alt="Events" data-caption="<b>Sorority Formal</b>" data-meta="Canon" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Sorority Formal</span></div></div>
+        <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/eventsmerch.JPG" alt="Events" data-caption="<b>Sorority Merch Photoshoot</b>" data-meta="Canon" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Merch Shoot</span></div></div>
+        <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/eventspaint.JPG" alt="Events" data-caption="<b>Paint Night</b>" data-meta="Canon" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Paint Night</span></div></div>
+        <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/gphi3.JPG" alt="Events" data-caption="<b>Sorority Event</b>" data-meta="Canon" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Sorority Event</span></div></div>
+        <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/eventsfood.JPG" alt="Events" data-caption="<b>Food Serving Event</b>" data-meta="Canon" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Food Event</span></div></div>
+        <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/gphi4.JPG" alt="Events" data-caption="<b>Sorority Event</b>" data-meta="Canon" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Sorority Event</span></div></div>
+        <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/eventsformal.JPG" alt="Events" data-caption="<b>Sorority Formal</b>" data-meta="Canon" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Sorority Formal</span></div></div>
+        <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/eventsshabbat.JPG" alt="Events" data-caption="<b>Shabbat Dinner</b>" data-meta="Canon" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Shabbat Dinner</span></div></div>
+        <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/eventsshop.JPG" alt="Events" data-caption="<b>Popup Art Market</b>" data-meta="Canon" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Popup Art Market</span></div></div>
+        <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/eventssmile.JPG" alt="Events" data-caption="<b>Popup Food Event</b>" data-meta="Canon" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Popup Food Event</span></div></div>
+        <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/gphi1.JPG" alt="Events" data-caption="<b>Sorority Event</b>" data-meta="Canon" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Sorority Event</span></div></div>
+        <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/eventsmocktail.JPG" alt="Events" data-caption="<b>Mocktail Night</b>" data-meta="Canon" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Mocktail Night</span></div></div>
+    </div>
 </div>
-  <button id="lightbox-next" class="lightbox-info-btn" onclick="nextPhoto()">next ›</button>
-  <button id="lightbox-next-left" class="lightbox-info-btn" onclick="prevPhoto()">‹ back</button>
 
-  <script>
-
-    let galleryImages = Array.from(document.querySelectorAll('.masonry-item'));
-    let currentIndex = 0;
-
-    function openLightbox(item) {
-      const img = item.querySelector('img');
-      document.getElementById('lightbox-img').src = img.src;
-      document.getElementById('lightbox-caption').innerHTML = img.dataset.caption || '';
-      document.querySelector('.lightbox').style.display = 'flex';
-
-      // Show Next button
-      document.getElementById('lightbox-next').style.display = 'block';
-      document.getElementById('lightbox-next-left').style.display = 'block';
-      // Hide nav menus
-      document.querySelector('nav').classList.add('nav-hidden');
-      document.querySelector('.mobile-nav').classList.add('nav-hidden');
-
-      currentIndex = galleryImages.indexOf(item);
-    }
-
-    function closeLightbox(event) {
-      if (event.target.classList.contains('lightbox') || event.target.classList.contains('close-btn')) {
-        document.querySelector('.lightbox').style.display = 'none';
-
-        // Hide Next button
-        document.getElementById('lightbox-next').style.display = 'none'; // hide button
-        document.getElementById('lightbox-next-left').style.display = 'none'; // hide button
-        // Show nav menus
-        document.querySelector('nav').classList.remove('nav-hidden');
-        document.querySelector('.mobile-nav').classList.remove('nav-hidden');
-      }
-    }
-
-    function nextPhoto() {
-      currentIndex++;
-      if (currentIndex >= galleryImages.length) currentIndex = 0;
-
-      const nextItem = galleryImages[currentIndex];
-      const nextImg = nextItem.querySelector('img');
-
-      document.getElementById('lightbox-img').src = nextImg.src;
-      document.getElementById('lightbox-caption').innerHTML = nextImg.dataset.caption || '';
-    }
-
-    function prevPhoto() {
-      currentIndex--; // go to previous index
-      if (currentIndex < 0) currentIndex = galleryImages.length - 1; // loop to last image if at start
-
-      const prevItem = galleryImages[currentIndex];
-      const prevImg = prevItem.querySelector('img');
-
-      document.getElementById('lightbox-img').src = prevImg.src;
-      document.getElementById('lightbox-caption').innerHTML = prevImg.dataset.caption || '';
-    }
-  </script>
-
-
-    <footer class="site-footer">
-        <div class="footer-left">
-            © 2026 Megan Tucker Photography — All Rights Reserved
+<!-- PRICING CROSSLINK -->
+<div style="max-width:1400px; margin:0 auto; padding:48px 20px 0;">
+    <div style="display:flex; align-items:center; justify-content:space-between; gap:24px; padding:28px 36px; border:1px solid rgba(200,169,110,0.2); border-radius:3px; background:rgba(200,169,110,0.03);">
+        <div>
+            <p style="font-size:9px; letter-spacing:0.25em; text-transform:uppercase; color:var(--accent); margin-bottom:7px;">Pricing Information</p>
+            <p style="font-family:'Cormorant Garamond',serif; font-size:22px; font-weight:300; color:var(--light); margin-bottom:6px;">Sessions prices <em style="font-style:italic; color:var(--accent);">vary based on shoot</em></p>
+            <p style="font-size:13px; color:var(--silver);">Fully edited gallery, multiple angles, and quick delivery included.</p>
         </div>
-        <div class="footer-right">
-            <a href="https://www.instagram.com/flicsbymegan/" target="_blank" class="social-icon">
-                <img src="jpgs/instagram.svg" alt="Instagram" />
-            </a>
-            <a href="https://www.linkedin.com/in/meganmtucker10/" target="_blank" class="social-icon">
-                <img src="jpgs/linkedin.svg" alt="LinkedIn" />
-            </a>
-            <a href="https://www.youtube.com/meganmariet" target="_blank" class="social-icon">
-                <img src="jpgs/youtube.svg" alt="YouTube" />
-            </a>
-        </div>
-    </footer>
+        <a href="pricing.html" style="display:inline-block; white-space:nowrap; flex-shrink:0; padding:12px 28px; border:1px solid var(--accent); color:var(--accent); text-decoration:none; font-size:10px; letter-spacing:0.2em; text-transform:uppercase; border-radius:2px; transition:all 0.25s;" onmouseover="this.style.background='var(--accent)';this.style.color='var(--black)'" onmouseout="this.style.background='transparent';this.style.color='var(--accent)'">View Full Pricing →</a>
+    </div>
+</div>
+
+<div class="gallery-info">
+    <div class="info-block">
+        <p class="info-label">Event Types</p>
+        <p class="info-text">Campus events · Fundraisers<br>Organization photoshoots · Social events<br>Formal portraits · Community gatherings</p>
+    </div>
+    <div class="info-block">
+        <p class="info-label">What You Get</p>
+        <p class="info-text">Real-time coverage<br>Fully edited gallery delivery<br>Video content</p>
+    </div>
+    <div class="info-block">
+        <p class="info-label">Book Coverage</p>
+        <p class="info-text">Based in Massachusetts. Available for travel.</p>
+        <a href="contact.html" class="order-btn">Get in Touch →</a>
+    </div>
+</div>
+
+<footer class="site-footer">
+    <div>© 2026 Megan Tucker Photography — All Rights Reserved</div>
+    <div class="footer-right">
+        <a href="https://www.instagram.com/flicsbymegan/" target="_blank" class="social-icon"><img src="jpgs/instagram.svg" alt="Instagram"></a>
+        <a href="https://www.linkedin.com/in/meganmtucker10/" target="_blank" class="social-icon"><img src="jpgs/linkedin.svg" alt="LinkedIn"></a>
+        <a href="https://www.youtube.com/meganmariet" target="_blank" class="social-icon"><img src="jpgs/youtube.svg" alt="YouTube"></a>
+    </div>
+</footer>
+
+<div class="lightbox" id="lightbox" onclick="handleLightboxClick(event)">
+    <button class="lb-close" onclick="closeLightbox()">✕</button>
+    <button class="lb-nav lb-prev" onclick="navigate(-1)">‹</button>
+    <button class="lb-nav lb-next" onclick="navigate(1)">›</button>
+    <div class="lb-counter" id="lbCounter"></div>
+    <div class="lightbox-inner"><img id="lbImg" src="" alt=""><div class="lightbox-caption-bar"><div class="lb-caption-text" id="lbCaption"></div><div class="lb-caption-meta" id="lbMeta"></div></div></div>
+</div>
+<script>
+    const desktopNav = document.getElementById('desktopNav');
+    window.addEventListener('scroll', () => desktopNav.classList.toggle('scrolled', window.scrollY > 60));
+    function toggleMenu() { const l = document.getElementById('mobileLinks'); l.style.display = l.style.display === 'flex' ? 'none' : 'flex'; }
+    let allItems = Array.from(document.querySelectorAll('.masonry-item')), currentIndex = 0;
+    function openLightbox(item) { currentIndex = allItems.indexOf(item); renderLightbox(); document.getElementById('lightbox').classList.add('open'); document.body.style.overflow = 'hidden'; }
+    function renderLightbox() { const img = allItems[currentIndex].querySelector('img'); document.getElementById('lbImg').src = img.src; document.getElementById('lbCaption').innerHTML = img.dataset.caption || ''; document.getElementById('lbMeta').textContent = img.dataset.meta || ''; document.getElementById('lbCounter').textContent = `${currentIndex + 1} / ${allItems.length}`; }
+    function closeLightbox() { document.getElementById('lightbox').classList.remove('open'); document.body.style.overflow = ''; }
+    function navigate(dir) { currentIndex = (currentIndex + dir + allItems.length) % allItems.length; renderLightbox(); }
+    function handleLightboxClick(e) { if (e.target === document.getElementById('lightbox')) closeLightbox(); }
+    document.addEventListener('keydown', e => { if (!document.getElementById('lightbox').classList.contains('open')) return; if (e.key === 'ArrowRight') navigate(1); if (e.key === 'ArrowLeft') navigate(-1); if (e.key === 'Escape') closeLightbox(); });
+    let touchStartX = 0;
+    document.getElementById('lightbox').addEventListener('touchstart', e => { touchStartX = e.changedTouches[0].clientX; });
+    document.getElementById('lightbox').addEventListener('touchend', e => { const diff = touchStartX - e.changedTouches[0].clientX; if (Math.abs(diff) > 40) navigate(diff > 0 ? 1 : -1); });
+</script>
 </body>
 </html>
-
-
-
-
-
-
