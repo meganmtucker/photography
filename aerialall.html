@@ -7,277 +7,217 @@
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-
         gtag('config', 'G-XW45ZFL71R');
     </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Landscapes | Megan Tucker Photography</title>
+    <title>Aerial Perspectives | Megan Tucker Photography</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="favicon.png">
+    <style>
+        /* ── Real estate crosslink panel ── */
+        .re-crosslink {
+            position: relative;
+            overflow: hidden;
+            margin: 60px 20px;
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 3px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 320px;
+        }
+        .re-crosslink-img {
+            position: relative;
+            overflow: hidden;
+        }
+        .re-crosslink-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            filter: brightness(0.65);
+            transition: transform 0.6s ease;
+        }
+        .re-crosslink:hover .re-crosslink-img img { transform: scale(1.03); }
+        .re-crosslink-text {
+            background: var(--charcoal);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 48px 52px;
+            border-left: 1px solid rgba(255,255,255,0.05);
+        }
+        .re-crosslink-label {
+            font-size: 9px;
+            letter-spacing: 0.28em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 14px;
+        }
+        .re-crosslink-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(26px, 3vw, 40px);
+            font-weight: 300;
+            color: var(--light);
+            line-height: 1.15;
+            margin-bottom: 16px;
+        }
+        .re-crosslink-title em { font-style: italic; color: var(--accent); }
+        .re-crosslink-body {
+            font-size: 13px;
+            line-height: 1.75;
+            color: var(--silver);
+            margin-bottom: 28px;
+            max-width: 400px;
+        }
+        .re-crosslink-btn {
+            display: inline-block;
+            align-self: flex-start;
+            padding: 12px 28px;
+            border: 1px solid var(--accent);
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 10px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            border-radius: 2px;
+            transition: all 0.25s;
+        }
+        .re-crosslink-btn:hover { background: var(--accent); color: var(--black); }
+
+        @media (max-width: 768px) {
+            .re-crosslink { grid-template-columns: 1fr; margin: 40px 10px; }
+            .re-crosslink-img { min-height: 200px; }
+            .re-crosslink-text { padding: 32px 24px; }
+        }
+    </style>
 </head>
 <body>
 
-<!-- NAV MENU -->
-<nav class="desktop-nav">
+<nav class="desktop-nav" id="desktopNav">
     <a href="index.html">Home</a>
-    <a href="landscapeshome.html"class="active">Landscapes</a>
+    <a href="landscapeshome.html" class="active">Landscapes</a>
     <a href="seniors.html">Senior Portraits</a>
     <a href="realestate.html">Real Estate</a>
     <a href="events.html">Events</a>
     <a href="contact.html">Contact</a>
 </nav>
-
-<!-- HEADER -->
-<header>
-    <!-- MOBILE NAV -->
-    <nav class="mobile-nav">
-        <div class="nav-header">
-            <div class="mobile-nav-header">
-                <div class="mobile-nav-left">
-                    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
-                    <span class="mobile-logo">Megan Tucker Photography</span>
-                </div>
-            </div>
-
-        </div>
-        <div class="mobile-links" id="mobileLinks">
-            <a href="index.html">Home</a>
-            <a href="landscapeshome.html"class="active">Landscapes</a>
-            <a href="seniors.html">Senior Portraits</a>
-            <a href="realestate.html">Real Estate</a>
-            <a href="events.html">Events</a>
-            <a href="contact.html">Contact</a>
-        </div>
-    </nav>
-
-
-    <!-- MASONRY GRID -->
-    <section class="masonry">
-
-      
-        <div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/dronecliff.jpg" alt="Mohegan Bluffs" data-caption="<b>Mohegan Bluffs in Block Island, RI</b> <br><br>Shot on DJI <br> June 2021" loading="lazy" width="1920" height="1080">
-        </div>
-      
-        <div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/landisland.jpg" alt="Bassetts Island" data-caption="<b>Bassetts Island in Cape Cod, MA</b> <br><br>Shot on DJI <br> June 2024" loading="lazy" width="1920" height="1080">
-        </div>
-        
-        <div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/dronebbeach.jpg" alt="Black Sand Beach" data-caption="<b>Black Sand Beach in Iceland</b> <br><br>Shot on DJI <br> July 2021" loading="lazy" width="1920" height="1080">
-        </div>
-        <div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/landlake.jpg" alt="Azores, Portugal" data-caption="<b>Lagoa do Fogo in Azores, Portugal</b> <br><br>Shot on DJI <br> July 2023" loading="lazy" width="1920" height="1198">
-        </div>
-
-        <div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/droneglacier.JPG" alt="Glacier" data-caption="<b>Glacier in Iceland </b> <br><br>Shot on DJI <br> July 2021" loading="lazy" width="1920" height="1080">
-        </div>
-        <div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/dronelonesome.jpg" alt="Lonesome Lake" data-caption="<b>Lonesome Lake in Lincoln, NH </b> <br><br>Shot on DJI <br> July 2024" loading="lazy" width="1920" height="1371">
-        </div>
-        
-        <div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/dronewfall.jpg" alt="Drone Waterfall 2" data-caption="<b>Skogafoss, Iceland</b> <br><br>Shot on DJI <br> July 2021" loading="lazy" width="1920" height="1080">
-        </div>
-
-        <div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/dronecapesun.jpg" alt="Sunset in Cape Cod" data-caption="<b>Sunset in Cape Cod, MA</b> <br><br>Shot on DJI <br> July 2025" loading="lazy" width="1920" height="985">
-        </div>
-       
-<div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/droneturks.jpg" alt="Turks and Caicos" data-caption="<b>Turks and Caicos Coastline</b> <br><br>Shot on DJI <br> March 2024" loading="lazy" width="1920" height="1080">
-        </div>
-
-        <div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/droneice.jpg" alt="Jökulsárlón Ice lagoon" data-caption="<b>Jökulsárlón Ice lagoon in Iceland</b> <br><br>Shot on Canon <br> July 2021" loading="lazy" width="1920" height="1080">
-        </div>
-        <div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/dronesun.jpg" alt="Sunset in Cape Cod" data-caption="<b>Sunset in Cape Cod, MA </b> <br><br>Shot on DJI <br> June 2024" loading="lazy" width="1920" height="1080">
-        </div>
-
- <div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/dronescanyon.JPG" alt="Iceland" data-caption="<b>Studagil Canyon in Iceland </b> <br><br>Shot on DJI <br> July 2021" loading="lazy" width="1920" height="1080">
-        </div>
-
-        <div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/dronehotspring.JPG" alt="Iceland" data-caption="<b>Hot spring in Iceland </b> <br><br>Shot on DJI <br> July 2021" loading="lazy" width="1920" height="1080">
-        </div>
-        
-        <div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/dronefall.jpg" alt="Fall in Stratton" data-caption="<b>Fall in Stratton, VT</b> <br><br>Shot on DJI <br> October 2025" loading="lazy" width="1920" height="1080">
-        </div>
-        <div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/dronebeach2.jpg" alt="Cape Cod, MA" data-caption="<b>Chatham Lighthouse Beach in Cape Cod, MA</b> <br><br>Shot on DJI <br> July 2020" loading="lazy" width="1920" height="1080">
-        </div>
-
-        <div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/droneincanyon.JPG" alt="Iceland" data-caption="<b>Studagil Canyon in Iceland </b> <br><br>Shot on DJI <br> July 2021" loading="lazy" width="1920" height="1080">
-        </div>
-
-        <div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/dronewave.jpg" alt="Turks and Caicos" data-caption="<b>Beach in Turks and Caicos </b> <br><br>Shot on DJI <br> March 2024" loading="lazy" width="1440" height="1920">
-        </div>
-
-        <div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/dronebass.jpg" alt="Bassetts Island" data-caption="<b>Bassetts Island in Cape Cod, MA</b> <br><br>Shot on DJI <br> June 2024" loading="lazy" width="1920" height="1080">
-        </div>
-
-        <div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/droneblack.jpg" alt="Black Sand Beach" data-caption="<b>Black Sand Beach in Iceland</b> <br><br>Shot on DJI <br> July 2021" loading="lazy" width="1920" height="1375">
-        </div>
-        
-        <div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/droneharbor.jpg" alt="Rockport Harbor" data-caption="<b>Rockport Harbor, MA</b> <br><br>Shot on DJI <br> June 2021" loading="lazy" width="1920" height="1340">
-        </div>
-        <div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/droneroad.jpg" alt="Ring Road" data-caption="<b>Ring Road, Iceland </b> <br><br>Shot on DJI <br> July 2021" loading="lazy" width="1920" height="1080">
-        </div>
-
-<div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/dronewfalldown.JPG" alt="Iceland" data-caption="<b>Waterfall in Iceland </b> <br><br>Shot on DJI <br> July 2021" loading="lazy" width="1920" height="1080">
-        </div>
-
-<div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/dronebsbeach.JPG" alt="Black Sand Beach" data-caption="<b>Black Sand Beach in Iceland </b> <br><br>Shot on DJI <br> July 2021" loading="lazy" width="1920" height="1292">
-        </div>
-
-         <div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/droneorangemt.JPG" alt="Iceland" data-caption="<b>Hot spring in Iceland </b> <br><br>Shot on DJI <br> July 2021" loading="lazy" width="1920" height="1080">
-        </div>
-    
-        
-        
-    </section>
-
-    <p>I am a FAA-certified Part 107 Pilot with 5+ years of experience flying drones.</p>
-
-    <p> <a href="landscapeshome.html" target=”_blank”
-           style="
-        display:inline-block;
-        margin-top:20px;
-        padding:12px 24px;
-        background:#333;
-        color:white;
-        text-decoration:none;
-        border-radius:6px;
-        font-weight:bold;
-        font-size:16px;
-        transition:0.3s;">Landscapes Homepage</a></p>
-
-    <p> <a href="contact.html" target=”_blank”
-           style="
-        display:inline-block;
-        margin-top:20px;
-        padding:12px 24px;
-        background:#333;
-        color:white;
-        text-decoration:none;
-        border-radius:6px;
-        font-weight:bold;
-        font-size:16px;
-        transition:0.3s;">Order a Print</a></p>
-
-    <!-- LIGHTBOX -->
-    <div class="lightbox" onclick="closeLightbox(event)">
-        <div class="lightbox-content">
-            <button class="close-btn" onclick="closeLightbox(event)">×</button>
-            <img id="lightbox-img" src="" alt="">
-            <div class="lightbox-caption" id="lightbox-caption"></div>
-        </div>
+<nav class="mobile-nav" id="mobileNav">
+    <div class="mobile-nav-header">
+        <span class="mobile-logo">Megan Tucker Photography</span>
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
     </div>
-    <button id="lightbox-next" class="lightbox-info-btn" onclick="nextPhoto()">next ›</button>
-    <button id="lightbox-next-left" class="lightbox-info-btn" onclick="prevPhoto()">‹ back</button>
+    <div class="mobile-links" id="mobileLinks">
+        <a href="index.html">Home</a>
+        <a href="landscapeshome.html" class="active">Landscapes</a>
+        <a href="seniors.html">Senior Portraits</a>
+        <a href="realestate.html">Real Estate</a>
+        <a href="events.html">Events</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</nav>
 
-    <script>
+<section class="hero">
+    <div class="hero-bg" style="background-image: url('jpgs/dronecapesun.jpg');"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <span class="hero-eyebrow">Landscapes · 2020 – 2025</span>
+        <h1 class="hero-title">Aerial<br><em>Perspectives</em></h1>
+        <p class="hero-subtitle">FAA Part 107 Certified &nbsp;·&nbsp; DJI Mavic Mini</p>
+    </div>
+    <div class="hero-scroll"><div class="scroll-line"></div><span>Scroll</span></div>
+</section>
 
-        let galleryImages = Array.from(document.querySelectorAll('.masonry-item'));
-        let currentIndex = 0;
+<div class="gallery-section">
+    <div class="masonry">
+        <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/dronecliff.jpg" alt="Block Island RI" data-caption="<b>Mohegan Bluffs</b><br>Block Island, RI" data-meta="June 2021 · DJI" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Mohegan Bluffs</span></div></div>
+        <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/landisland.jpg" alt="Cape Cod" data-caption="<b>Bassetts Island</b><br>Cape Cod, MA" data-meta="June 2024 · DJI" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Bassetts Island</span></div></div>
+        <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/dronebbeach.jpg" alt="Iceland" data-caption="<b>Black Sand Beach</b><br>Iceland" data-meta="July 2021 · DJI" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Iceland Black Sand Beach</span></div></div>
+        <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/landlake.jpg" alt="Azores" data-caption="<b>Lagoa do Fogo</b><br>Azores, Portugal" data-meta="July 2023 · DJI" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Lagoa do Fogo</span></div></div>
+        <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/droneglacier.JPG" alt="Iceland" data-caption="<b>Glacier</b><br>Iceland" data-meta="July 2021 · DJI" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Iceland Glacier</span></div></div>
+        <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/dronelonesome.jpg" alt="NH" data-caption="<b>Lonesome Lake</b><br>Lincoln, NH" data-meta="July 2024 · DJI" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Lonesome Lake</span></div></div>
+        <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/dronewfall.jpg" alt="Iceland" data-caption="<b>Skogafoss</b><br>Iceland" data-meta="July 2021 · DJI" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Skogafoss</span></div></div>
+        <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/dronecapesun.jpg" alt="Cape Cod" data-caption="<b>Sunset</b><br>Cape Cod, MA" data-meta="July 2025 · DJI" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Cape Cod</span></div></div>
+        <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/droneturks.jpg" alt="Turks and Caicos" data-caption="<b>Turks and Caicos Coastline</b>" data-meta="March 2024 · DJI" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Turks and Caicos</span></div></div>
+        <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/droneice.jpg" alt="Iceland" data-caption="<b>Jökulsárlón Ice Lagoon</b><br>Iceland" data-meta="July 2021 · DJI" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Ice Lagoon Aerial</span></div></div>
+        <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/dronesun.jpg" alt="Cape Cod" data-caption="<b>Sunset</b><br>Cape Cod, MA" data-meta="June 2024 · DJI" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Cape Cod</span></div></div>
+        <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/dronescanyon.JPG" alt="Iceland" data-caption="<b>Studagil Canyon</b><br>Iceland" data-meta="July 2021 · DJI" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Studagil Canyon</span></div></div>
+        <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/dronehotspring.JPG" alt="Iceland" data-caption="<b>Hot Spring</b><br>Iceland" data-meta="July 2021 · DJI" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Iceland Hot Spring</span></div></div>
+        <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/dronefall.jpg" alt="Vermont" data-caption="<b>Fall Foliage</b><br>Stratton, VT" data-meta="October 2025 · DJI" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Stratton Fall</span></div></div>
+        <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/dronebeach2.jpg" alt="Cape Cod" data-caption="<b>Chatham Lighthouse Beach</b><br>Cape Cod, MA" data-meta="July 2020 · DJI" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Chatham Lighthouse Beach</span></div></div>
+        <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/droneincanyon.JPG" alt="Iceland" data-caption="<b>Studagil Canyon</b><br>Iceland" data-meta="July 2021 · DJI" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Studagil Canyon</span></div></div>
+        <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/dronewave.jpg" alt="Turks and Caicos" data-caption="<b>Beach</b><br>Turks and Caicos" data-meta="March 2024 · DJI" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Turks and Caicos</span></div></div>
+        <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/dronebass.jpg" alt="Cape Cod" data-caption="<b>Bassetts Island</b><br>Cape Cod, MA" data-meta="June 2024 · DJI" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Bassetts Island</span></div></div>
+        <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/droneblack.jpg" alt="Iceland" data-caption="<b>Black Sand Beach</b><br>Iceland" data-meta="July 2021 · DJI" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Black Sand Beach</span></div></div>
+        <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/droneharbor.jpg" alt="Rockport MA" data-caption="<b>Rockport Harbor</b><br>Massachusetts" data-meta="June 2021 · DJI" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Rockport Harbor</span></div></div>
+        <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/droneroad.jpg" alt="Iceland" data-caption="<b>Ring Road</b><br>Iceland" data-meta="July 2021 · DJI" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Ring Road</span></div></div>
+        <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/dronewfalldown.JPG" alt="Iceland" data-caption="<b>Waterfall</b><br>Iceland" data-meta="July 2021 · DJI" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Iceland Waterfall</span></div></div>
+        <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/dronebsbeach.JPG" alt="Iceland" data-caption="<b>Black Sand Beach</b><br>Iceland" data-meta="July 2021 · DJI" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Black Sand Beach</span></div></div>
+        <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/droneorangemt.JPG" alt="Iceland" data-caption="<b>Hot Spring</b><br>Iceland" data-meta="July 2021 · DJI" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Hot Spring Aerial</span></div></div>
+    </div>
+</div>
 
-        function openLightbox(item) {
-            const img = item.querySelector('img');
-            document.getElementById('lightbox-img').src = img.src;
-            document.getElementById('lightbox-caption').innerHTML = img.dataset.caption || '';
-            document.querySelector('.lightbox').style.display = 'flex';
+<!-- REAL ESTATE CROSSLINK — split panel -->
+<div class="re-crosslink" style="margin-top: 60px;">
+    <div class="re-crosslink-img">
+        <img src="jpgs/DJI_0275.JPG" alt="Real Estate Aerial Photography">
+    </div>
+    <div class="re-crosslink-text">
+        <p class="re-crosslink-label">Also available</p>
+        <h2 class="re-crosslink-title">Aerial Property<br><em>Photography</em></h2>
+        <p class="re-crosslink-body">Looking for drone photography for a property listing, campus, or commercial space? My real estate portfolio covers interior, exterior, and aerial work — shot for agents, resorts, and universities.</p>
+        <a href="realestate.html" class="re-crosslink-btn">View Real Estate Portfolio →</a>
+    </div>
+</div>
 
-            // Show Next button
-            document.getElementById('lightbox-next').style.display = 'block';
-            document.getElementById('lightbox-next-left').style.display = 'block';
-            // Hide nav menus
-            document.querySelector('nav').classList.add('nav-hidden');
-            document.querySelector('.mobile-nav').classList.add('nav-hidden');
+<div class="gallery-info">
+    <div class="info-block">
+        <p class="info-label">Equipment</p>
+        <p class="info-text">DJI Mavic Mini<br>FAA Part 107 Certified since 2023</p>
+    </div>
+    <div class="info-block">
+        <p class="info-label">Locations</p>
+        <p class="info-text">Iceland · Azores · Turks &amp; Caicos · Cape Cod · New Hampshire · Vermont · and more</p>
+    </div>
+    <div class="info-block">
+        <p class="info-label">Order a Print</p>
+        <p class="info-text">All photos available as fine art prints.</p>
+        <a href="contact.html" class="order-btn">Enquire →</a>
+    </div>
+</div>
 
-            currentIndex = galleryImages.indexOf(item);
-        }
+<footer class="site-footer">
+    <div>© 2026 Megan Tucker Photography — All Rights Reserved</div>
+    <div class="footer-right">
+        <a href="https://www.instagram.com/flicsbymegan/" target="_blank" class="social-icon"><img src="jpgs/instagram.svg" alt="Instagram"></a>
+        <a href="https://www.linkedin.com/in/meganmtucker10/" target="_blank" class="social-icon"><img src="jpgs/linkedin.svg" alt="LinkedIn"></a>
+        <a href="https://www.youtube.com/meganmariet" target="_blank" class="social-icon"><img src="jpgs/youtube.svg" alt="YouTube"></a>
+    </div>
+</footer>
 
-        function closeLightbox(event) {
-            if (event.target.classList.contains('lightbox') || event.target.classList.contains('close-btn')) {
-                document.querySelector('.lightbox').style.display = 'none';
-
-                // Hide Next button
-                document.getElementById('lightbox-next').style.display = 'none'; // hide button
-                document.getElementById('lightbox-next-left').style.display = 'none'; // hide button
-                // Show nav menus
-                document.querySelector('nav').classList.remove('nav-hidden');
-                document.querySelector('.mobile-nav').classList.remove('nav-hidden');
-            }
-        }
-
-        function nextPhoto() {
-            currentIndex++;
-            if (currentIndex >= galleryImages.length) currentIndex = 0;
-
-            const nextItem = galleryImages[currentIndex];
-            const nextImg = nextItem.querySelector('img');
-
-            document.getElementById('lightbox-img').src = nextImg.src;
-            document.getElementById('lightbox-caption').innerHTML = nextImg.dataset.caption || '';
-        }
-
-        function prevPhoto() {
-            currentIndex--; // go to previous index
-            if (currentIndex < 0) currentIndex = galleryImages.length - 1; // loop to last image if at start
-
-            const prevItem = galleryImages[currentIndex];
-            const prevImg = prevItem.querySelector('img');
-
-            document.getElementById('lightbox-img').src = prevImg.src;
-            document.getElementById('lightbox-caption').innerHTML = prevImg.dataset.caption || '';
-        }
-
-            function toggleMenu() {
-            const links = document.getElementById('mobileLinks');
-            if (links.style.display === "flex") {
-            links.style.display = "none";
-        } else {
-            links.style.display = "flex";
-        }
-        }
-
-    </script>
-
-
-    <footer class="site-footer">
-        <div class="footer-left">
-            © 2026 Megan Tucker Photography — All Rights Reserved
-        </div>
-        <div class="footer-right">
-            <a href="https://www.instagram.com/flicsbymegan/" target="_blank" class="social-icon">
-                <img src="jpgs/instagram.svg" alt="Instagram" />
-            </a>
-            <a href="https://www.linkedin.com/in/meganmtucker10/" target="_blank" class="social-icon">
-                <img src="jpgs/linkedin.svg" alt="LinkedIn" />
-            </a>
-            <a href="https://www.youtube.com/meganmariet" target="_blank" class="social-icon">
-                <img src="jpgs/youtube.svg" alt="YouTube" />
-            </a>
-        </div>
-    </footer>
+<div class="lightbox" id="lightbox" onclick="handleLightboxClick(event)">
+    <button class="lb-close" onclick="closeLightbox()">✕</button>
+    <button class="lb-nav lb-prev" onclick="navigate(-1)">‹</button>
+    <button class="lb-nav lb-next" onclick="navigate(1)">›</button>
+    <div class="lb-counter" id="lbCounter"></div>
+    <div class="lightbox-inner"><img id="lbImg" src="" alt=""><div class="lightbox-caption-bar"><div class="lb-caption-text" id="lbCaption"></div><div class="lb-caption-meta" id="lbMeta"></div></div></div>
+</div>
+<script>
+    const desktopNav = document.getElementById('desktopNav');
+    window.addEventListener('scroll', () => desktopNav.classList.toggle('scrolled', window.scrollY > 60));
+    function toggleMenu() { const l = document.getElementById('mobileLinks'); l.style.display = l.style.display === 'flex' ? 'none' : 'flex'; }
+    let allItems = Array.from(document.querySelectorAll('.masonry-item')), currentIndex = 0;
+    function openLightbox(item) { currentIndex = allItems.indexOf(item); renderLightbox(); document.getElementById('lightbox').classList.add('open'); document.body.style.overflow = 'hidden'; }
+    function renderLightbox() { const img = allItems[currentIndex].querySelector('img'); document.getElementById('lbImg').src = img.src; document.getElementById('lbCaption').innerHTML = img.dataset.caption || ''; document.getElementById('lbMeta').textContent = img.dataset.meta || ''; document.getElementById('lbCounter').textContent = `${currentIndex + 1} / ${allItems.length}`; }
+    function closeLightbox() { document.getElementById('lightbox').classList.remove('open'); document.body.style.overflow = ''; }
+    function navigate(dir) { currentIndex = (currentIndex + dir + allItems.length) % allItems.length; renderLightbox(); }
+    function handleLightboxClick(e) { if (e.target === document.getElementById('lightbox')) closeLightbox(); }
+    document.addEventListener('keydown', e => { if (!document.getElementById('lightbox').classList.contains('open')) return; if (e.key === 'ArrowRight') navigate(1); if (e.key === 'ArrowLeft') navigate(-1); if (e.key === 'Escape') closeLightbox(); });
+    let touchStartX = 0;
+    document.getElementById('lightbox').addEventListener('touchstart', e => { touchStartX = e.changedTouches[0].clientX; });
+    document.getElementById('lightbox').addEventListener('touchend', e => { const diff = touchStartX - e.changedTouches[0].clientX; if (Math.abs(diff) > 40) navigate(diff > 0 ? 1 : -1); });
+</script>
 </body>
 </html>
-
-
-
-
-
