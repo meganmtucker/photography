@@ -1,160 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XW45ZFL71R"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-XW45ZFL71R');
-    </script>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XW45ZFL71R');</script>
+    <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Landscapes | Megan Tucker Photography</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <link rel="stylesheet" href="style.css"><link rel="icon" type="image/x-icon" href="favicon.png">
 </head>
-
 <body>
-
-<!-- NAV MENU -->
-<nav class="desktop-nav">
-    <a href="index.html">Home</a>
-    <a href="landscapeshome.html" class="active">Landscapes</a>
-    <a href="seniors.html">Senior Portraits</a>
-    <a href="realestate.html">Real Estate</a>
-    <a href="events.html">Events</a>
-    <a href="contact.html">Contact</a>
+<nav class="desktop-nav" id="desktopNav">
+    <a href="index.html">Home</a><a href="landscapeshome.html" class="active">Landscapes</a>
+    <a href="seniors.html">Senior Portraits</a><a href="realestate.html">Real Estate</a>
+    <a href="events.html">Events</a><a href="contact.html">Contact</a>
 </nav>
+<nav class="mobile-nav"><div class="mobile-nav-header"><span class="mobile-logo">Megan Tucker Photography</span><div class="hamburger" onclick="toggleMenu()">&#9776;</div></div>
+<div class="mobile-links" id="mobileLinks">
+    <a href="index.html">Home</a><a href="landscapeshome.html" class="active">Landscapes</a>
+    <a href="seniors.html">Senior Portraits</a><a href="realestate.html">Real Estate</a>
+    <a href="events.html">Events</a><a href="contact.html">Contact</a>
+</div></nav>
 
-<!-- HEADER -->
-<header>
-    <!-- MOBILE NAV -->
-    <nav class="mobile-nav">
-        <div class="nav-header">
-            <div class="mobile-nav-header">
-                <div class="mobile-nav-left">
-                    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
-                    <span class="mobile-logo">Megan Tucker Photography</span>
-                </div>
-            </div>
+<div class="hub-intro">
+    <p class="hub-intro-eyebrow">Landscapes</p>
+    <h1 class="hub-intro-title">Landscapes<br><em>Around the World</em></h1>
+    <p class="hub-intro-sub">10+ years of travel photography &nbsp;·&nbsp; DJI &amp; Canon &nbsp;·&nbsp; FAA Part 107 Certified</p>
+</div>
 
+<!-- FEATURED: Selected Works -->
+<div class="hub-featured">
+    <a class="hub-featured-card" href="landscapes.html">
+        <img src="jpgs/landice.jpg" alt="Selected Works">
+        <div class="hub-featured-label">
+            <span class="hub-featured-star">★ &nbsp; Selected Works</span>
+            <div class="hub-featured-title">The Best of<br><em>Everything</em></div>
+            <p class="hub-featured-sub">Hand-picked favorites across all locations &amp; years</p>
+            <span class="hub-featured-cta">View Collection →</span>
         </div>
-        <div class="mobile-links" id="mobileLinks">
-            <a href="index.html">Home</a>
-            <a href="landscapeshome.html" class="active">Landscapes</a>
-            <a href="seniors.html">Senior Portraits</a>
-            <a href="realestate.html">Real Estate</a>
-            <a href="events.html">Events</a>
-            <a href="contact.html">Contact</a>
-        </div>
-    </nav>
-    
+    </a>
+</div>
 
-</header>
-<br><br>
-    <a href="landscapes.html" class="grid-itemLSH">
-    <img src="jpgs/dronewfall.jpg" alt="Landscapes">
-    <div class="label">Landscape Favorites</div>
-</a>
-
-
-<br>
-
-<section>
-    <h4><p style="text-align: center; font-weight: bold;">
-    Explore my favorites or browse albums by category:
-    </h4>
-</section>
-
-<!-- 4-COLUMN IMAGE GRID -->
-<section class="gridls">
-
-    <a class="grid-item" href="seasia26.html">
+<!-- TRIP CARDS GRID -->
+<div class="hub-grid">
+    <a class="hub-card" href="seasia26.html">
         <img src="jpgs/asiariverswim.jpg" alt="Southeast Asia 2026">
-        <div class="label">Southeast Asia 2026</div>
+        <div class="hub-card-label">
+            <p class="hub-card-eyebrow">January 2026</p>
+            <h3 class="hub-card-title">Southeast Asia</h3>
+            <p class="hub-card-meta">Vietnam &nbsp;·&nbsp; Malaysia</p>
+        </div>
     </a>
-
-    <a class="grid-item" href="pnw25.html">
-        <img src="jpgs/landmountain.jpg" alt="PNW">
-        <div class="label">Pacific Northwest 2025</div>
+    <a class="hub-card" href="pnw25.html">
+        <img src="jpgs/landmountain.jpg" alt="Pacific Northwest 2025">
+        <div class="hub-card-label">
+            <p class="hub-card-eyebrow">May 2025</p>
+            <h3 class="hub-card-title">Pacific Northwest</h3>
+            <p class="hub-card-meta">Washington &nbsp;·&nbsp; Oregon</p>
+        </div>
     </a>
-
-    <a class="grid-item" href="portugal23.html">
-        <img src="jpgs/portsunrise.JPG" alt="portugal">
-        <div class="label">Portugal 2023</div>
+    <a class="hub-card" href="portugal23.html">
+        <img src="jpgs/portsunrise.JPG" alt="Portugal 2023">
+        <div class="hub-card-label">
+            <p class="hub-card-eyebrow">July 2023</p>
+            <h3 class="hub-card-title">Portugal</h3>
+            <p class="hub-card-meta">Lisbon &nbsp;·&nbsp; The Azores</p>
+        </div>
     </a>
-
-    <a class="grid-item" href="iceland.html">
-        <img src="jpgs/dronebbeach.jpg" alt="Iceland">
-        <div class="label">Iceland 2021</div>
+    <a class="hub-card" href="iceland.html">
+        <img src="jpgs/dronebbeach.jpg" alt="Iceland 2021">
+        <div class="hub-card-label">
+            <p class="hub-card-eyebrow">July 2021</p>
+            <h3 class="hub-card-title">Iceland</h3>
+            <p class="hub-card-meta">Ring Road &nbsp;·&nbsp; 2 weeks</p>
+        </div>
     </a>
-
-    <a class="grid-item" href="newengland.html">
-        <img src="jpgs/dronebeach2.jpg" alt="New England"/>
-        <div class="label">New England</div>
+    <a class="hub-card" href="newengland.html">
+        <img src="jpgs/dronebeach2.jpg" alt="New England">
+        <div class="hub-card-label">
+            <p class="hub-card-eyebrow">Home</p>
+            <h3 class="hub-card-title">New England</h3>
+            <p class="hub-card-meta">MA &nbsp;·&nbsp; NH &nbsp;·&nbsp; ME &nbsp;·&nbsp; VT</p>
+        </div>
     </a>
-
-    <a class="grid-item" href="aerialall.html">
-        <img src="jpgs/dronecapesun.jpg" alt="Aerial"/>
-        <div class="label">Aerial Perspectives</div>
+    <a class="hub-card" href="aerialall.html">
+        <img src="jpgs/dronecapesun.jpg" alt="Aerial Perspectives">
+        <div class="hub-card-label">
+            <p class="hub-card-eyebrow">FAA Part 107 Certified</p>
+            <h3 class="hub-card-title">Aerial Perspectives</h3>
+            <p class="hub-card-meta">DJI Drone &nbsp;·&nbsp; 2020–2025</p>
+        </div>
     </a>
+</div>
 
-</section>
-
-<p  style="text-align: center"> Follow me on Instagram to see live and up to date photos:
-    <br>
-    
-        <a href="https://instagram.com/flicsbymegan" target=”_blank”
-               style="
-        display:inline-block;
-        margin-top:20px;
-        padding:12px 24px;
-        background:#333;
-        color:white;
-        text-decoration:none;
-        border-radius:6px;
-        font-size:16px;
-        font-weight: bold;
-        transition:0.3s;">@flicsbymegan</a>
-       
-    </p>
-
- <br>
+<div class="hub-instagram">
+    <p>Follow along for live and up-to-date shots</p>
+    <a href="https://instagram.com/flicsbymegan" target="_blank" class="btn-primary">@flicsbymegan on Instagram</a>
+</div>
 
 <footer class="site-footer">
-    <div class="footer-left">
-        © 2026 Megan Tucker Photography — All Rights Reserved
-    </div>
+    <div class="footer-left">© 2026 Megan Tucker Photography — All Rights Reserved</div>
     <div class="footer-right">
-        <a href="https://www.instagram.com/flicsbymegan/" target="_blank" class="social-icon">
-            <img src="jpgs/instagram.svg" alt="Instagram" />
-        </a>
-        <a href="https://www.linkedin.com/in/meganmtucker10/" target="_blank" class="social-icon">
-            <img src="jpgs/linkedin.svg" alt="LinkedIn" />
-        </a>
-        <a href="https://www.youtube.com/meganmariet" target="_blank" class="social-icon">
-            <img src="jpgs/youtube.svg" alt="YouTube" />
-        </a>
+        <a href="https://www.instagram.com/flicsbymegan/" target="_blank" class="social-icon"><img src="jpgs/instagram.svg" alt="Instagram"></a>
+        <a href="https://www.linkedin.com/in/meganmtucker10/" target="_blank" class="social-icon"><img src="jpgs/linkedin.svg" alt="LinkedIn"></a>
+        <a href="https://www.youtube.com/meganmariet" target="_blank" class="social-icon"><img src="jpgs/youtube.svg" alt="YouTube"></a>
     </div>
 </footer>
-
-
 <script>
-    function toggleMenu() {
-        const links = document.getElementById('mobileLinks');
-        if (links.style.display === "flex") {
-            links.style.display = "none";
-        } else {
-            links.style.display = "flex";
-        }
-    }
+    const nav=document.getElementById('desktopNav');
+    window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>60));
+    function toggleMenu(){const l=document.getElementById('mobileLinks');l.style.display=l.style.display==='flex'?'none':'flex';}
 </script>
-
-</body>
-</html>
-
-
-
+</body></html>
