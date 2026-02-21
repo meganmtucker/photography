@@ -1,144 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XW45ZFL71R"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XW45ZFL71R');</script>
+    <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Megan Tucker Photography</title>
+    <meta name="description" content="Photography by Megan Tucker — landscapes, senior portraits, real estate, and events. FAA Part 107 certified drone pilot based in Massachusetts.">
+    <meta property="og:image" content="jpgs/landmountain.jpg">
     <link rel="preload" as="image" href="jpgs/landmountain.jpg">
-    <meta name="description" content="Photography by Megan Tucker — specializing in landscapes, senior portraits, real estate, and event photography across New England. FAA Part 107 certified drone pilot.">
-    <meta name="author" content="Megan Tucker">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="favicon.png">
-    <meta property="og:image" content="jpgs/picofme.jpg">
 </head>
 <body>
-
-<!-- NAV MENU -->
-<nav class="desktop-nav">
-    <a href="index.html" class="active">Home</a>
-    <a href="landscapeshome.html">Landscapes</a>
-    <a href="seniors.html">Senior Portraits</a>
-    <a href="realestate.html">Real Estate</a>
-    <a href="events.html">Events</a>
-    <a href="contact.html">Contact</a>
+<nav class="desktop-nav" id="desktopNav">
+    <a href="index.html" class="active">Home</a><a href="landscapeshome.html">Landscapes</a>
+    <a href="seniors.html">Senior Portraits</a><a href="realestate.html">Real Estate</a>
+    <a href="events.html">Events</a><a href="contact.html">Contact</a>
 </nav>
+<nav class="mobile-nav"><div class="mobile-nav-header"><span class="mobile-logo">Megan Tucker Photography</span><div class="hamburger" onclick="toggleMenu()">&#9776;</div></div>
+<div class="mobile-links" id="mobileLinks">
+    <a href="index.html" class="active">Home</a><a href="landscapeshome.html">Landscapes</a>
+    <a href="seniors.html">Senior Portraits</a><a href="realestate.html">Real Estate</a>
+    <a href="events.html">Events</a><a href="contact.html">Contact</a>
+</div></nav>
 
-<!-- HEADER -->
-<header>
-    <!-- MOBILE NAV -->
-    <nav class="mobile-nav">
-        <div class="nav-header">
-            <div class="mobile-nav-header">
-                <div class="mobile-nav-left">
-                    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
-                    <span class="mobile-logo">Megan Tucker Photography</span>
-                </div>
-            </div>
-
-        </div>
-        <div class="mobile-links" id="mobileLinks">
-            <a href="index.html" class="active">Home</a>
-            <a href="landscapeshome.html">Landscapes</a>
-            <a href="seniors.html">Senior Portraits</a>
-            <a href="realestate.html">Real Estate</a>
-            <a href="events.html">Events</a>
-            <a href="contact.html">Contact</a>
-        </div>
-    </nav>
-    <!-- BANNER IMAGE -->
-    <div class="banner">
+<section class="home-hero">
+    <div class="home-hero-bg"></div>
+    <div class="home-hero-overlay"></div>
+    <div class="home-hero-content">
+        <h1 class="home-hero-name">Megan Tucker Photography</h1>
+        <p class="home-hero-tagline">Landscapes &nbsp;·&nbsp; Portraits &nbsp;·&nbsp; Events &nbsp;·&nbsp; Real Estate</p>
+        <p class="home-hero-sub">Massachusetts &nbsp;·&nbsp; FAA Part 107 Certified</p>
     </div>
-    <h1 class="banner-title">Megan Tucker Photography</h1>
-
-</header>
-<div class="about2">
-    <p> Welcome to my portfolio! Explore some of my favorite work from over 10 years of shooting.</p>
-</div>
-
-<!-- 4-COLUMN IMAGE GRID -->
-<section class="grid">
-
-    <a class="grid-item" href="landscapeshome.html">
-        <img src="jpgs/landice.jpg" alt="Landscapes">
-        <div class="label">Landscapes</div>
-    </a>
-
-    <a class="grid-item" href="seniors.html">
-        <img src="jpgs/gradsit.JPG" alt="Senior Portraits">
-        <div class="label">Senior Portraits</div>
-    </a>
-
-    <a class="grid-item" href="realestate.html">
-        <img src="jpgs/realrooms.jpg" alt="Real Estate"/>
-        <div class="label">Real Estate</div>
-    </a>
-
-    <a class="grid-item" href="events.html">
-        <img src="jpgs/eventsfair.jpeg" alt="Events">
-        <div class="label">Events</div>
-    </a>
-
+    <div class="hero-scroll"><div class="scroll-line"></div><span>Explore</span></div>
 </section>
 
-<section class="about">
-  <!-- Left column: H2 + photo -->
-  <div class="about-left">
-    <h2>About Me</h2>
-    <img src="jpgs/headshot.jpg" alt="Photo of Megan" class="about-photo">
-  </div>
+<section class="category-grid">
+    <a class="category-card" href="landscapeshome.html">
+        <img src="jpgs/landice.jpg" alt="Landscapes">
+        <div class="category-card-label"><div class="category-card-title">Landscapes</div><div class="category-card-sub">Travel &amp; Nature</div></div>
+    </a>
+    <a class="category-card" href="seniors.html">
+        <img src="jpgs/gradsit.JPG" alt="Senior Portraits">
+        <div class="category-card-label"><div class="category-card-title">Senior Portraits</div><div class="category-card-sub">Graduation &amp; Portrait Sessions</div></div>
+    </a>
+    <a class="category-card" href="realestate.html">
+        <img src="jpgs/realrooms.jpg" alt="Real Estate">
+        <div class="category-card-label"><div class="category-card-title">Real Estate</div><div class="category-card-sub">Aerial Property Photography</div></div>
+    </a>
+    <a class="category-card" href="events.html">
+        <img src="jpgs/eventsfair.jpeg" alt="Events">
+        <div class="category-card-label"><div class="category-card-title">Events</div><div class="category-card-sub">Campus &nbsp;·&nbsp; Community &nbsp;·&nbsp; Commercial</div></div>
+    </a>
+</section>
 
-  <div class="about-right">
-    <p>
-      My name is Megan Tucker, and I am a Massachusetts-based photographer. 
-      I am mostly self-taught and love shooting a variety of subjects. My favorite shots are captured outdoors 
-      while hiking or traveling, but I also enjoy shooting portraits, events, and real estate photography.
-    </p>
-    <p>
-      I started shooting when I was 13 and got my first point-and-shoot camera. Since then, my gear and expertise have evolved. 
-      As of 2023, I am a certified FAA Part 107 pilot, allowing me to capture drone photos commercially.
-    </p>
-    <p>
-      I currently shoot portraits, events, and real estate photos for hire. I also commission prints of my photos. 
-      If you have any questions or want to book a shoot, fill out the form below to get in touch!
-    </p>
-    <p>
-      My portfolio contains my best and favorite work, spanning several years. Check out my Instagram page for up-to-date content!
-    </p>
-  </div>
-  <div class="about-buttons">
-    <a href="contact.html" class="btn">Contact Me</a>
-    <a href="https://instagram.com/flicsbymegan" class="btn" target="_blank">@flicsbymegan</a>
-  </div>
+<section class="about-section">
+    <div class="about-left"><img src="jpgs/headshot.jpg" alt="Megan Tucker"></div>
+    <div class="about-right">
+        <h2 class="about-heading">About Me</h2>
+        <p class="about-body">My name is Megan Tucker, and I am a Massachusetts-based photographer. I am mostly self-taught and love shooting a variety of subjects. My favorite shots are captured outdoors while hiking or traveling, but I also enjoy shooting portraits, events, and real estate photography.</p>
+        <p class="about-body">I started shooting when I was 13 and got my first point-and-shoot camera. Since then, my gear and expertise have evolved. As of 2023, I am a certified FAA Part 107 pilot, allowing me to capture drone photos commercially.</p>
+        <p class="about-body">I currently shoot portraits, events, and real estate photos for hire. I also commission prints of my photos. If you have any questions or want to book a shoot, get in touch!</p>
+        <p class="about-body">My portfolio contains my best and favorite work, spanning several years. Check out my Instagram for up-to-date content!</p>
+        <div class="about-btns">
+            <a href="contact.html" class="btn-primary">Contact Me</a>
+            <a href="https://instagram.com/flicsbymegan" class="btn-outline" target="_blank">@flicsbymegan</a>
+        </div>
+    </div>
 </section>
 
 <footer class="site-footer">
-    <div class="footer-left">
-        © 2026 Megan Tucker Photography — All Rights Reserved
-    </div>
+    <div class="footer-left">© 2026 Megan Tucker Photography — All Rights Reserved</div>
     <div class="footer-right">
-        <a href="https://www.instagram.com/flicsbymegan/" target="_blank" class="social-icon">
-            <img src="jpgs/instagram.svg" alt="Instagram" />
-        </a>
-        <a href="https://www.linkedin.com/in/meganmtucker10/" target="_blank" class="social-icon">
-            <img src="jpgs/linkedin.svg" alt="LinkedIn" />
-        </a>
-        <a href="https://www.youtube.com/meganmariet" target="_blank" class="social-icon">
-            <img src="jpgs/youtube.svg" alt="YouTube" />
-        </a>
+        <a href="https://www.instagram.com/flicsbymegan/" target="_blank" class="social-icon"><img src="jpgs/instagram.svg" alt="Instagram"></a>
+        <a href="https://www.linkedin.com/in/meganmtucker10/" target="_blank" class="social-icon"><img src="jpgs/linkedin.svg" alt="LinkedIn"></a>
+        <a href="https://www.youtube.com/meganmariet" target="_blank" class="social-icon"><img src="jpgs/youtube.svg" alt="YouTube"></a>
     </div>
 </footer>
-
 <script>
-    function toggleMenu() {
-        const links = document.getElementById('mobileLinks');
-        if (links.style.display === "flex") {
-            links.style.display = "none";
-        } else {
-            links.style.display = "flex";
-        }
-    }
+    const nav=document.getElementById('desktopNav');
+    window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>60));
+    function toggleMenu(){const l=document.getElementById('mobileLinks');l.style.display=l.style.display==='flex'?'none':'flex';}
 </script>
-</body>
-</html>
-
-
+</body></html>
