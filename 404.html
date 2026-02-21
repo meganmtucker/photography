@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page Not Found | Megan Tucker Photography</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <style>
+        .page-404 {
+            min-height: 100vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            overflow: hidden;
+        }
+
+        /* ── Left: photo collage ── */
+        .four04-photos {
+            position: relative;
+            overflow: hidden;
+        }
+        .four04-photos::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to right, transparent 60%, var(--black) 100%);
+            z-index: 1;
+        }
+        .photo-grid-404 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: repeat(3, 1fr);
+            height: 100vh;
+            gap: 4px;
+        }
+        .photo-grid-404 img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.7);
+            transition: filter 0.4s ease;
+        }
+        .photo-grid-404 img:hover { filter: brightness(0.9); }
+        /* span first image tall */
+        .photo-grid-404 .tall { grid-row: span 2; }
+
+        /* ── Right: text ── */
+        .four04-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 60px 60px 60px 40px;
+            position: relative;
+            z-index: 2;
+        }
+        .four04-num {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(100px, 14vw, 180px);
+            font-weight: 300;
+            line-height: 0.9;
+            color: var(--off-black);
+            letter-spacing: -0.04em;
+            position: absolute;
+            top: 40px;
+            right: 40px;
+            user-select: none;
+            pointer-events: none;
+        }
+        .four04-eyebrow {
+            font-size: 9px;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 18px;
+            animation: fadeUp 0.8s 0.1s ease both;
+        }
+        .four04-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(36px, 4vw, 54px);
+            font-weight: 300;
+            line-height: 1.1;
+            color: var(--light);
+            margin-bottom: 20px;
+            animation: fadeUp 0.8s 0.2s ease both;
+        }
+        .four04-title em { font-style: italic; color: var(--accent); }
+        .four04-body {
+            font-size: 14px;
+            color: var(--silver);
+            line-height: 1.75;
+            margin-bottom: 36px;
+            max-width: 380px;
+            animation: fadeUp 0.8s 0.3s ease both;
+        }
+        .four04-links {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            animation: fadeUp 0.8s 0.4s ease both;
+        }
+        .four04-link-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 13px 28px;
+            background: var(--accent);
+            color: var(--black);
+            text-decoration: none;
+            font-size: 10px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            border-radius: 2px;
+            transition: background 0.2s;
+            align-self: flex-start;
+        }
+        .four04-link-primary:hover { background: var(--accent2); }
+        .four04-nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 6px;
+        }
+        .four04-nav-link {
+            padding: 9px 18px;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 2px;
+            color: var(--silver);
+            text-decoration: none;
+            font-size: 11px;
+            letter-spacing: 0.08em;
+            transition: border-color 0.2s, color 0.2s;
+        }
+        .four04-nav-link:hover { border-color: var(--accent); color: var(--accent); }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(18px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 768px) {
+            .page-404 { grid-template-columns: 1fr; grid-template-rows: 45vh 1fr; }
+            .four04-photos::after { background: linear-gradient(to bottom, transparent 50%, var(--black) 100%); }
+            .photo-grid-404 { height: 45vh; }
+            .four04-text { padding: 36px 24px 48px; }
+            .four04-num { font-size: 80px; top: 16px; right: 16px; }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="desktop-nav" id="desktopNav">
+    <a href="index.html">Home</a>
+    <a href="landscapeshome.html">Landscapes</a>
+    <a href="seniors.html">Senior Portraits</a>
+    <a href="realestate.html">Real Estate</a>
+    <a href="events.html">Events</a>
+    <a href="contact.html">Contact</a>
+</nav>
+<nav class="mobile-nav" id="mobileNav">
+    <div class="mobile-nav-header">
+        <span class="mobile-logo">Megan Tucker Photography</span>
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+    </div>
+    <div class="mobile-links" id="mobileLinks">
+        <a href="index.html">Home</a>
+        <a href="landscapeshome.html">Landscapes</a>
+        <a href="seniors.html">Senior Portraits</a>
+        <a href="realestate.html">Real Estate</a>
+        <a href="events.html">Events</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</nav>
+
+<div class="page-404">
+
+    <!-- LEFT: photo collage -->
+    <div class="four04-photos">
+        <div class="photo-grid-404">
+            <img class="tall" src="jpgs/landice.jpg"        alt="Iceland ice lagoon">
+            <img              src="jpgs/dronecapesun.jpg"   alt="Cape Cod sunset">
+            <img              src="jpgs/portsunrise.JPG"    alt="Lisbon sunrise">
+            <img              src="jpgs/gradsit.JPG"        alt="Senior portrait">
+            <img              src="jpgs/landmountain.jpg"   alt="Hurricane Ridge">
+            <img              src="jpgs/droneturks.jpg"     alt="Turks and Caicos">
+        </div>
+    </div>
+
+    <!-- RIGHT: message -->
+    <div class="four04-text">
+        <span class="four04-num">404</span>
+        <p class="four04-eyebrow">Lost in the wilderness</p>
+        <h1 class="four04-title">This page<br>doesn't <em>exist</em></h1>
+        <p class="four04-body">Looks like this shot didn't make the cut — or the link is broken. Head back and find what you were looking for.</p>
+        <div class="four04-links">
+            <a href="index.html" class="four04-link-primary">← Back to Home</a>
+            <div class="four04-nav-links">
+                <a href="landscapeshome.html" class="four04-nav-link">Landscapes</a>
+                <a href="seniors.html"        class="four04-nav-link">Portraits</a>
+                <a href="realestate.html"     class="four04-nav-link">Real Estate</a>
+                <a href="events.html"         class="four04-nav-link">Events</a>
+                <a href="contact.html"        class="four04-nav-link">Contact</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    const desktopNav = document.getElementById('desktopNav');
+    window.addEventListener('scroll', () => desktopNav.classList.toggle('scrolled', window.scrollY > 60));
+    function toggleMenu() {
+        const l = document.getElementById('mobileLinks');
+        l.style.display = l.style.display === 'flex' ? 'none' : 'flex';
+    }
+</script>
+</body>
+</html>
