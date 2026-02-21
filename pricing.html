@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XW45ZFL71R"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XW45ZFL71R');
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pricing | Megan Tucker Photography</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <style>
+        .pricing-page {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 130px 40px 80px;
+        }
+
+        /* ── Page header ── */
+        .pricing-header {
+            margin-bottom: 72px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: end;
+            padding-bottom: 40px;
+            border-bottom: 1px solid rgba(255,255,255,0.07);
+        }
+        .pricing-eyebrow {
+            font-size: 9px;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 16px;
+        }
+        .pricing-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(44px, 6vw, 72px);
+            font-weight: 300;
+            line-height: 0.95;
+            color: var(--light);
+        }
+        .pricing-title em { font-style: italic; color: var(--accent); }
+        .pricing-intro {
+            font-size: 14px;
+            line-height: 1.8;
+            color: var(--silver);
+            align-self: end;
+        }
+
+        /* ── Service block ── */
+        .service-block {
+            margin-bottom: 64px;
+            animation: fadeUp 0.7s ease both;
+        }
+        .service-block:nth-child(2) { animation-delay: 0.1s; }
+        .service-block:nth-child(3) { animation-delay: 0.2s; }
+        .service-block:nth-child(4) { animation-delay: 0.3s; }
+        .service-block:nth-child(5) { animation-delay: 0.4s; }
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .service-header {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            gap: 20px;
+            padding-bottom: 18px;
+            border-bottom: 1px solid rgba(255,255,255,0.07);
+            margin-bottom: 28px;
+        }
+        .service-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 32px;
+            font-weight: 300;
+            color: var(--light);
+        }
+        .service-name em { font-style: italic; color: var(--accent); }
+        .service-tag {
+            font-size: 9px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--muted);
+            white-space: nowrap;
+        }
+
+        /* Tier cards */
+        .tier-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin-bottom: 20px;
+        }
+        .tier-card {
+            padding: 24px 26px;
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 2px;
+            background: rgba(255,255,255,0.02);
+            transition: border-color 0.25s, background 0.25s;
+            position: relative;
+            overflow: hidden;
+        }
+        .tier-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 2px;
+            height: 100%;
+            background: var(--accent);
+            opacity: 0;
+            transition: opacity 0.25s;
+        }
+        .tier-card:hover { border-color: rgba(200,169,110,0.3); background: rgba(200,169,110,0.03); }
+        .tier-card:hover::before { opacity: 1; }
+        .tier-label {
+            font-size: 9px;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 10px;
+        }
+        .tier-price {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 44px;
+            font-weight: 300;
+            color: var(--light);
+            line-height: 1;
+            margin-bottom: 4px;
+        }
+        .tier-price sup {
+            font-size: 20px;
+            vertical-align: super;
+            color: var(--silver);
+        }
+        .tier-duration {
+            font-size: 11px;
+            color: var(--muted);
+            letter-spacing: 0.08em;
+            margin-bottom: 18px;
+        }
+        .tier-includes {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+        }
+        .tier-includes li {
+            font-size: 12px;
+            color: var(--silver);
+            padding-left: 14px;
+            position: relative;
+            line-height: 1.5;
+        }
+        .tier-includes li::before {
+            content: '—';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-size: 10px;
+        }
+
+        /* Enquire-only block (no price) */
+        .enquire-card {
+            padding: 28px 32px;
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 2px;
+            background: rgba(255,255,255,0.02);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 32px;
+        }
+        .enquire-card-text { flex: 1; }
+        .enquire-label {
+            font-size: 9px;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 8px;
+        }
+        .enquire-heading {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 22px;
+            font-weight: 300;
+            color: var(--light);
+            margin-bottom: 8px;
+        }
+        .enquire-body {
+            font-size: 13px;
+            color: var(--silver);
+            line-height: 1.65;
+            max-width: 460px;
+        }
+        .enquire-btn {
+            display: inline-block;
+            white-space: nowrap;
+            flex-shrink: 0;
+            padding: 12px 26px;
+            border: 1px solid var(--accent);
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 10px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            border-radius: 2px;
+            transition: all 0.25s;
+        }
+        .enquire-btn:hover { background: var(--accent); color: var(--black); }
+
+        /* Prints strip */
+        .prints-strip {
+            padding: 26px 32px;
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+            background: rgba(200,169,110,0.03);
+            margin-bottom: 64px;
+        }
+        .prints-strip-left { display: flex; align-items: center; gap: 20px; }
+        .prints-icon {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 28px;
+            color: var(--accent);
+            opacity: 0.6;
+        }
+        .prints-text-label {
+            font-size: 9px;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 5px;
+        }
+        .prints-text-body {
+            font-size: 13px;
+            color: var(--silver);
+            line-height: 1.55;
+        }
+
+        /* Bottom note */
+        .pricing-note {
+            padding-top: 32px;
+            border-top: 1px solid rgba(255,255,255,0.06);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+        }
+        .pricing-note-text {
+            font-size: 13px;
+            color: var(--muted);
+            line-height: 1.7;
+            max-width: 520px;
+        }
+        .pricing-note-text a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+        .pricing-note-text a:hover { text-decoration: underline; }
+
+        @media (max-width: 720px) {
+            .pricing-page { padding: 100px 20px 60px; }
+            .pricing-header { grid-template-columns: 1fr; gap: 20px; margin-bottom: 48px; }
+            .tier-row { grid-template-columns: 1fr; }
+            .enquire-card { flex-direction: column; align-items: flex-start; }
+            .prints-strip { flex-direction: column; align-items: flex-start; }
+            .pricing-note { flex-direction: column; align-items: flex-start; }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="desktop-nav" id="desktopNav">
+    <a href="index.html">Home</a>
+    <a href="landscapeshome.html">Landscapes</a>
+    <a href="seniors.html">Senior Portraits</a>
+    <a href="realestate.html">Real Estate</a>
+    <a href="events.html">Events</a>
+    <a href="contact.html">Contact</a>
+</nav>
+<nav class="mobile-nav" id="mobileNav">
+    <div class="mobile-nav-header">
+        <span class="mobile-logo">Megan Tucker Photography</span>
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+    </div>
+    <div class="mobile-links" id="mobileLinks">
+        <a href="index.html">Home</a>
+        <a href="landscapeshome.html">Landscapes</a>
+        <a href="seniors.html">Senior Portraits</a>
+        <a href="realestate.html">Real Estate</a>
+        <a href="events.html">Events</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</nav>
+
+<div class="pricing-page">
+
+    <!-- HEADER -->
+    <div class="pricing-header">
+        <div>
+            <p class="pricing-eyebrow">Quotes</p>
+            <h1 class="pricing-title">Pricing &amp;<br><em>Packages</em></h1>
+        </div>
+        <p class="pricing-intro">Every shoot is different — here's a straightforward breakdown of what to expect. All packages include fully edited, high-resolution photos delivered via an online gallery.</p>
+    </div>
+
+    <!-- SENIOR PORTRAITS -->
+    <div class="service-block">
+        <div class="service-header">
+            <h2 class="service-name">Senior Portraits &amp; <em>Headshots</em></h2>
+            <span class="service-tag">Fixed Pricing</span>
+        </div>
+        <div class="tier-row">
+            <div class="tier-card">
+                <p class="tier-label">Solo Session</p>
+                <p class="tier-price"><sup>$</sup>110</p>
+                <p class="tier-duration">1-hour shoot · 1 person</p>
+                <ul class="tier-includes">
+                    <li>Fully edited high-res gallery</li>
+                    <li>Multiple outfit changes welcome</li>
+                    <li>Indoor or outdoor locations</li>
+                    <li>Online gallery delivery within 2 weeks</li>
+            
+                </ul>
+            </div>
+            <div class="tier-card">
+                <p class="tier-label">Group Session</p>
+                <p class="tier-price"><sup>$</sup>350</p>
+                <p class="tier-duration">90-minute shoot · 2+ people</p>
+                <ul class="tier-includes">
+                    <li>Fully edited high-res gallery</li>
+                    <li>Group + individual shots</li>
+                    <li>Multiple outfit changes welcome</li>
+                    <li>Indoor or outdoor locations</li>
+                    <li>Online gallery delivery within 2 weeks</li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- REAL ESTATE -->
+    <div class="service-block">
+        <div class="service-header">
+            <h2 class="service-name">Real Estate &amp; <em>Commercial</em></h2>
+            <span class="service-tag">Custom Quotes</span>
+        </div>
+        <div class="enquire-card">
+            <div class="enquire-card-text">
+                <p class="enquire-label">Pricing varies by project</p>
+                <p class="enquire-heading">Interior · Exterior · Aerial</p>
+                <p class="enquire-body">Every property is different — pricing depends on square footage, number of spaces, drone coverage, and turnaround time. Get in touch with details about your listing or project and I'll put together a custom quote.</p>
+            </div>
+            <a href="contact.html" class="enquire-btn">Get a Quote →</a>
+        </div>
+    </div>
+
+    <!-- EVENTS -->
+    <div class="service-block">
+        <div class="service-header">
+            <h2 class="service-name"><em>Events</em></h2>
+            <span class="service-tag">Custom Quotes</span>
+        </div>
+        <div class="enquire-card">
+            <div class="enquire-card-text">
+                <p class="enquire-label">Pricing varies by project</p>
+                <p class="enquire-heading">Campus · Community · Commercial</p>
+                <p class="enquire-body">Event coverage is priced based on duration, location, and deliverables. Whether it's a two-hour fundraiser or a full-day campus event, reach out and I'll work out a rate that fits.</p>
+            </div>
+            <a href="contact.html" class="enquire-btn">Get a Quote →</a>
+        </div>
+    </div>
+
+    <!-- PRINTS -->
+    <div class="prints-strip">
+        <div class="prints-strip-left">
+            <span class="prints-icon">✦</span>
+            <div>
+                <p class="prints-text-label">Fine Art Prints</p>
+                <p class="prints-text-body">Any photo from my landscape galleries is available as a high-resolution fine art print. Pricing depends on size and finish — contact me for details.</p>
+            </div>
+        </div>
+        <a href="contact.html" class="enquire-btn">Enquire →</a>
+    </div>
+
+    <!-- BOTTOM NOTE -->
+    <div class="pricing-note">
+        <p class="pricing-note-text">All packages are customizable. I'm based in Massachusetts and available for travel — additional fees may apply for shoots outside the Boston area. Have questions? <a href="contact.html">Get in touch</a>.</p>
+        <a href="contact.html" class="enquire-btn">Book a Shoot →</a>
+    </div>
+
+</div>
+
+<footer class="site-footer">
+    <div>© 2026 Megan Tucker Photography — All Rights Reserved</div>
+    <div class="footer-right">
+        <a href="https://www.instagram.com/flicsbymegan/" target="_blank" class="social-icon"><img src="jpgs/instagram.svg" alt="Instagram"></a>
+        <a href="https://www.linkedin.com/in/meganmtucker10/" target="_blank" class="social-icon"><img src="jpgs/linkedin.svg" alt="LinkedIn"></a>
+        <a href="https://www.youtube.com/meganmariet" target="_blank" class="social-icon"><img src="jpgs/youtube.svg" alt="YouTube"></a>
+    </div>
+</footer>
+
+<script>
+    const desktopNav = document.getElementById('desktopNav');
+    window.addEventListener('scroll', () => desktopNav.classList.toggle('scrolled', window.scrollY > 60));
+    function toggleMenu() {
+        const l = document.getElementById('mobileLinks');
+        l.style.display = l.style.display === 'flex' ? 'none' : 'flex';
+    }
+</script>
+</body>
+</html>
