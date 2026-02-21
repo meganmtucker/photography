@@ -1,310 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XW45ZFL71R"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-XW45ZFL71R');
-    </script>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Landscapes | Megan Tucker Photography</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XW45ZFL71R');</script>
+    <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Selected Works | Megan Tucker Photography</title>
+    <link rel="stylesheet" href="style.css"><link rel="icon" type="image/x-icon" href="favicon.png">
 </head>
 <body>
-
-<!-- NAV MENU -->
-<nav class="desktop-nav">
-    <a href="index.html">Home</a>
-    <a href="landscapeshome.html"class="active">Landscapes</a>
-    <a href="seniors.html">Senior Portraits</a>
-    <a href="realestate.html">Real Estate</a>
-    <a href="events.html">Events</a>
-    <a href="contact.html">Contact</a>
+<nav class="desktop-nav" id="desktopNav">
+    <a href="index.html">Home</a><a href="landscapeshome.html" class="active">Landscapes</a>
+    <a href="seniors.html">Senior Portraits</a><a href="realestate.html">Real Estate</a>
+    <a href="events.html">Events</a><a href="contact.html">Contact</a>
 </nav>
+<nav class="mobile-nav"><div class="mobile-nav-header"><span class="mobile-logo">Megan Tucker Photography</span><div class="hamburger" onclick="toggleMenu()">&#9776;</div></div>
+<div class="mobile-links" id="mobileLinks">
+    <a href="index.html">Home</a><a href="landscapeshome.html" class="active">Landscapes</a>
+    <a href="seniors.html">Senior Portraits</a><a href="realestate.html">Real Estate</a>
+    <a href="events.html">Events</a><a href="contact.html">Contact</a>
+</div></nav>
 
-<!-- HEADER -->
-<header>
-    <!-- MOBILE NAV -->
-    <nav class="mobile-nav">
-        <div class="nav-header">
-            <div class="mobile-nav-header">
-                <div class="mobile-nav-left">
-                    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
-                    <span class="mobile-logo">Megan Tucker Photography</span>
-                </div>
-            </div>
-
-        </div>
-        <div class="mobile-links" id="mobileLinks">
-            <a href="index.html">Home</a>
-            <a href="landscapeshome.html"class="active">Landscapes</a>
-            <a href="seniors.html">Senior Portraits</a>
-            <a href="realestate.html">Real Estate</a>
-            <a href="events.html">Events</a>
-            <a href="contact.html">Contact</a>
-        </div>
-    </nav>
-
-
-    <!-- MASONRY GRID -->
-    <section class="masonry">
-
-        <div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/landframe.jpg" alt="Acadia National Park"
-                 data-caption="<b>The Beehive, Acadia National Park</b> <br><br> Shot on Canon <br>November 2025"
-                 loading="lazy" width="1280" height="1920">
-        </div>
-        <div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/landice.jpg" alt="Jökulsárlón Ice lagoon" data-caption="<b>Jökulsárlón Ice lagoon in Iceland</b> <br><br>Shot on Canon <br> July 2021" loading="lazy" width="1920" height="1441">
-        </div>
-        <div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/dronecliff.jpg" alt="Mohegan Bluffs" data-caption="<b>Mohegan Bluffs in Block Island, RI</b> <br><br>Shot on DJI <br> June 2021" loading="lazy" width="1920" height="1080">
-        </div>
-        <div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/landbeacha.jpg" alt="Acadia National Park" data-caption="<b>Sandy Beach in Acadia National Park, ME</b> <br><br> Shot on Canon <br>November 2025" loading="lazy" width="1280" height="1920">
-        </div>
-        <div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/landbench.jpg" alt="Olympic National Park" data-caption="<b>Lake Crescent in Olympic National Park, WA</b> <br><br> Shot on Canon <br>May 2025" loading="lazy" width="1280" height="1920">
-        </div>
-        <div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/landforest.jpg" alt="Olympic National Park" data-caption="<b>Rainforest in Olympic National Park, WA</b> <br><br> Shot on Canon <br>May 2025" loading="lazy" width="1280" height="1920">
-        </div>
-        <div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/landwaterfall.jpg" alt="Olympic National Park" data-caption="<b>Marymere Falls in Olympic National Park, WA</b> <br><br> Shot on Canon <br>May 2025" loading="lazy" width="1280" height="1920">
-        </div>
-        <div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/landisland.jpg" alt="Bassetts Island" data-caption="<b>Bassetts Island in Cape Cod, MA</b> <br><br>Shot on DJI <br> June 2024" loading="lazy" width="1920" height="1080">
-        </div>
-        <div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/landmountain.jpg" alt="Olympic National Park" data-caption="<b>Hurricane Ridge in Olympic National Park, WA</b> <br><br> Shot on Canon <br>May 2025" loading="lazy" width="1920" height="1280">
-        </div>
-        <div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/dronebbeach.jpg" alt="Black Sand Beach" data-caption="<b>Black Sand Beach in Iceland</b> <br><br>Shot on DJI <br> July 2021" loading="lazy" width="1920" height="1080">
-        </div>
-        <div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/landlake.jpg" alt="Azores, Portugal" data-caption="<b>Lagoa do Fogo in Azores, Portugal</b> <br><br>Shot on DJI <br> July 2023" loading="lazy" width="1920" height="1198">
-        </div>
-        <div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/dronelonesome.jpg" alt="Lonesome Lake" data-caption="<b>Lonesome Lake in Lincoln, NH </b> <br><br>Shot on DJI <br> July 2024" loading="lazy" width="1920" height="1371">
-        </div>
-        <div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/landplant.jpg" alt="Azores, Portugal" data-caption="<b>Azores, Portugal Coastline</b> <br><br>Shot on Canon <br> July 2023" loading="lazy" width="1441" height="1920">
-        </div>
-        <div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/dronewfall.jpg" alt="Drone Waterfall 2" data-caption="<b>Skogafoss, Iceland</b> <br><br>Shot on DJI <br> July 2021" loading="lazy" width="1920" height="1080">
-        </div>
-
-        <div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/dronecapesun.jpg" alt="Sunset in Cape Cod" data-caption="<b>Sunset in Cape Cod, MA</b> <br><br>Shot on DJI <br> July 2025" loading="lazy" width="1920" height="985">
-        </div>
-        <div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/travelhorse.jpg" alt="Icelandic Horses" data-caption="<b>Icelandic Horses</b> <br><br>Shot on Canon <br> July 2021" loading="lazy" width="1920" height="1442">
-        </div>
-        <div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/landrainforest.jpg" alt="Rainforest" data-caption="<b>Rainforest in Monteverde, Costa Rica</b> <br><br>Shot on Canon <br> June 2022" loading="lazy" width="1441" height="1920">
-        </div>
-        <div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/landpara.jpg" alt="Austrian Alps" data-caption="<b>Austrian Alps</b> <br><br>Shot on Canon <br> October 2024" loading="lazy" width="1920" height="1207">
-        </div>
-        <div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/landreflect.jpg" alt="Concord River" data-caption="<b>Concord River Reflection in Concord, MA</b> <br><br>Shot on Canon <br> October 2025" loading="lazy" width="1786" height="1920">
-        </div>
-        <div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/droneice.jpg" alt="Jökulsárlón Ice lagoon" data-caption="<b>Jökulsárlón Ice lagoon in Iceland</b> <br><br>Shot on Canon <br> July 2021" loading="lazy" width="1920" height="1080">
-        </div>
-        <div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/dronesun.jpg" alt="Sunset in Cape Cod" data-caption="<b>Sunset in Cape Cod, MA </b> <br><br>Shot on DJI <br> June 2024" loading="lazy" width="1920" height="1080">
-        </div>
-        <div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/droneturks.jpg" alt="Turks and Caicos" data-caption="<b>Turks and Caicos Coastline</b> <br><br>Shot on DJI <br> March 2024" loading="lazy" width="1920" height="1080">
-        </div>
-        <div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/dronefall.jpg" alt="Fall in Stratton" data-caption="<b>Fall in Stratton, VT</b> <br><br>Shot on DJI <br> October 2025" loading="lazy" width="1920" height="1080">
-        </div>
-        <div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/dronebeach2.jpg" alt="Cape Cod, MA" data-caption="<b>Chatham Lighthouse Beach in Cape Cod, MA</b> <br><br>Shot on DJI <br> July 2020" loading="lazy" width="1920" height="1080">
-        </div>
-
-        <div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/travellight.jpg" alt="Portland Head Lighthouse" data-caption="<b>Portland Head Lighthouse, ME</b> <br><br>Shot on Canon <br> November 2025" loading="lazy" width="1367" height="1920">
-        </div>
-        <div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/travelboston2.jpg" alt="Boston" data-caption="<b>Boston, MA Skyline</b> <br><br>Shot on Canon <br> November 2025" loading="lazy" width="1280" height="1920">
-        </div>
-        <div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/travelme.jpg" alt="Olympic National Park" data-caption="<b>Hiking in Olympic National Park</b> <br><br>Shot on Canon <br> May 2025" loading="lazy" width="1479" height="1920">
-        </div>
-        <div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/travelgondola.jpg" alt="Zwolferhorn, Austria" data-caption="<b>Gondola on Zwolferhorn, Austria</b> <br><br>Shot on Canon <br> October 2024" loading="lazy" width="1462" height="1920">
-        </div>
-        <div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/travelbridge.jpg" alt="Lisbon, Portugal" data-caption="<b>25 de Abril Bridge in Lisbon, Portugal</b> <br><br>Shot on Canon <br> July 2023" loading="lazy" width="1441" height="1920">
-        </div>
-        <div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/dronewave.jpg" alt="Turks and Caicos" data-caption="<b>Beach in Turks and Caicos </b> <br><br>Shot on DJI <br> March 2024" loading="lazy" width="1440" height="1920">
-        </div>
-        <div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/asiamonkey.jpg" alt="monkey" data-caption="<b>Monkey in Kuala Lumpur, Malaysia</b> <br><br>Shot on Canon <br> January 2026" loading="lazy" width="1435" height="1920">
-        </div>
-        <div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/travelsalz.jpg" alt="Salzburg, Austria" data-caption="<b>Salzburg, Austria</b> <br><br>Shot on Canon <br> October 2024" loading="lazy" width="1920" height="1280">
-        </div>
-        <div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/travelturtle.jpg" alt="Turtle in Turks and Caicos" data-caption="<b>Turtle in Turks and Caicos</b> <br><br>Shot on GoPro <br> March 2024" loading="lazy" width="1440" height="1920">
-        </div>
-        <div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/travelsign.jpg" alt="Hollywood Sign, Los Angeles" data-caption="<b>Hollywood Sign in Los Angeles, CA </b> <br><br>Shot on Canon <br> June 2023" loading="lazy" width="1441" height="1920">
-        </div>
-        <div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/travelseattle.jpg" alt="Porter Square, Seattle" data-caption="<b>Porter Square in Seattle, WA</b> <br><br>Shot on Canon <br> May 2025" loading="lazy" width="1432" height="1920">
-        </div>
-        <div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/monkey.jpg" alt="Monkey in Costa Rica" data-caption="<b>Monkey in Manuel Antonio National Park, Costa Rica</b> <br><br>Shot on Canon <br> June 2022" loading="lazy" width="1920" height="1441">
-        </div>
-        <div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/dronebass.jpg" alt="Bassetts Island" data-caption="<b>Bassetts Island in Cape Cod, MA</b> <br><br>Shot on DJI <br> June 2024" loading="lazy" width="1920" height="1080">
-        </div>
-
-        <div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/traveldrive.jpg" alt="Pacific Northwest Road Trip" data-caption="<b>Pacific Northwest Road Trip</b> <br><br>Shot on Canon <br> May 2025" loading="lazy" width="1280" height="1920">
-        </div>
-
-        <div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/droneblack.jpg" alt="Black Sand Beach" data-caption="<b>Black Sand Beach in Iceland</b> <br><br>Shot on DJI <br> July 2021" loading="lazy" width="1920" height="1375">
-        </div>
-        <div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/boston1.jpg" alt="Boston Harbor" data-caption="<b>Boston, MA Harbor</b> <br><br>Shot on Canon <br> September 2020" loading="lazy" width="1440" height="1920">
-        </div>
-        <div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/droneharbor.jpg" alt="Rockport Harbor" data-caption="<b>Rockport Harbor, MA</b> <br><br>Shot on DJI <br> June 2021" loading="lazy" width="1920" height="1340">
-        </div>
-        <div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/droneroad.jpg" alt="Ring Road" data-caption="<b>Ring Road, Iceland </b> <br><br>Shot on DJI <br> July 2021" loading="lazy" width="1920" height="1080">
-        </div>
-        <div class="masonry-item" onclick="openLightbox(this)">
-            <img src="jpgs/asiaboatframe.jpg" alt="boat" data-caption="<b>A Boat in the Mekong River</b> <br><br>Shot on Canon <br> January 2026" loading="lazy" width="1920" height="1280">
-        </div>
-
-    </section>
-
-    <p> <a href="contact.html" target=”_blank”
-           style="
-        display:inline-block;
-        margin-top:20px;
-        padding:12px 24px;
-        background:#333;
-        color:white;
-        text-decoration:none;
-        border-radius:6px;
-        font-weight:bold;
-        font-size:16px;
-        transition:0.3s;">Order a Print</a></p>
-
-    <!-- LIGHTBOX -->
-    <div class="lightbox" onclick="closeLightbox(event)">
-        <div class="lightbox-content">
-            <button class="close-btn" onclick="closeLightbox(event)">×</button>
-            <img id="lightbox-img" src="" alt="">
-            <div class="lightbox-caption" id="lightbox-caption"></div>
-        </div>
+<section class="hero">
+    <div class="hero-bg" style="background-image:url('jpgs/landice.jpg');"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <span class="hero-eyebrow">Landscapes &nbsp;·&nbsp; Selected Works</span>
+        <h1 class="hero-title">The<br><em>Best of</em><br>Everything</h1>
+        <p class="hero-subtitle">Hand-picked favorites across all locations &amp; years</p>
     </div>
-    <button id="lightbox-next" class="lightbox-info-btn" onclick="nextPhoto()">next ›</button>
-    <button id="lightbox-next-left" class="lightbox-info-btn" onclick="prevPhoto()">‹ back</button>
+    <div class="hero-scroll"><div class="scroll-line"></div><span>Scroll</span></div>
+</section>
 
-    <script>
+<div class="masonry" style="margin-top:48px;">
+    <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/landframe.jpg" alt="Acadia" data-caption="<b>The Beehive, Acadia National Park</b><br>Maine" data-meta="November 2025 · Canon" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Acadia Natl Park</span></div></div>
+    <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/landice.jpg" alt="Iceland" data-caption="<b>Jökulsárlón Ice Lagoon</b><br>Iceland" data-meta="July 2021 · Canon" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Iceland</span></div></div>
+    <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/dronecliff.jpg" alt="Block Island" data-caption="<b>Mohegan Bluffs</b><br>Block Island, RI" data-meta="June 2021 · DJI" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Block Island, RI</span></div></div>
+    <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/landbeacha.jpg" alt="Acadia" data-caption="<b>Sandy Beach</b><br>Acadia National Park, ME" data-meta="November 2025 · Canon" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Acadia Natl Park</span></div></div>
+    <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/landbench.jpg" alt="Olympic NP" data-caption="<b>Lake Crescent</b><br>Olympic National Park, WA" data-meta="May 2025 · Canon" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Olympic Natl Park</span></div></div>
+    <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/landforest.jpg" alt="Olympic NP" data-caption="<b>Hoh Rainforest</b><br>Olympic National Park, WA" data-meta="May 2025 · Canon" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Olympic Natl Park</span></div></div>
+    <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/landwaterfall.jpg" alt="Olympic NP" data-caption="<b>Marymere Falls</b><br>Olympic National Park, WA" data-meta="May 2025 · Canon" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Olympic Natl Park</span></div></div>
+    <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/landisland.jpg" alt="Cape Cod" data-caption="<b>Bassetts Island</b><br>Cape Cod, MA" data-meta="June 2024 · DJI" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Cape Cod, MA</span></div></div>
+    <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/landmountain.jpg" alt="Olympic NP" data-caption="<b>Hurricane Ridge</b><br>Olympic National Park, WA" data-meta="May 2025 · Canon" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Olympic Natl Park</span></div></div>
+    <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/dronebbeach.jpg" alt="Iceland" data-caption="<b>Black Sand Beach</b><br>Iceland" data-meta="July 2021 · DJI" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Iceland</span></div></div>
+    <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/landlake.jpg" alt="Azores" data-caption="<b>Lagoa do Fogo</b><br>Azores, Portugal" data-meta="July 2023 · DJI" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Azores, Portugal</span></div></div>
+    <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/dronelonesome.jpg" alt="New Hampshire" data-caption="<b>Lonesome Lake</b><br>Lincoln, NH" data-meta="July 2024 · DJI" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Lincoln, NH</span></div></div>
+    <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/landplant.jpg" alt="Azores" data-caption="<b>Azores Coastline</b><br>Portugal" data-meta="July 2023 · Canon" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Azores, Portugal</span></div></div>
+    <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/dronewfall.jpg" alt="Iceland" data-caption="<b>Skogafoss</b><br>Iceland" data-meta="July 2021 · DJI" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Iceland</span></div></div>
+    <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/dronecapesun.jpg" alt="Cape Cod" data-caption="<b>Sunset</b><br>Cape Cod, MA" data-meta="July 2025 · DJI" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Cape Cod, MA</span></div></div>
+    <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/travelhorse.jpg" alt="Iceland" data-caption="<b>Icelandic Horses</b><br>Iceland" data-meta="July 2021 · Canon" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Iceland</span></div></div>
+    <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/landrainforest.jpg" alt="Costa Rica" data-caption="<b>Rainforest</b><br>Monteverde, Costa Rica" data-meta="June 2022 · Canon" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Costa Rica</span></div></div>
+    <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/landpara.jpg" alt="Austria" data-caption="<b>Austrian Alps</b><br>Austria" data-meta="October 2024 · Canon" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Austrian Alps</span></div></div>
+    <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/landreflect.jpg" alt="Concord MA" data-caption="<b>Concord River Reflection</b><br>Concord, MA" data-meta="October 2025 · Canon" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Concord, MA</span></div></div>
+    <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/droneice.jpg" alt="Iceland" data-caption="<b>Jökulsárlón Ice Lagoon</b><br>Iceland" data-meta="July 2021 · DJI" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Iceland</span></div></div>
+    <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/dronesun.jpg" alt="Cape Cod" data-caption="<b>Sunset</b><br>Cape Cod, MA" data-meta="June 2024 · DJI" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Cape Cod, MA</span></div></div>
+    <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/droneturks.jpg" alt="Turks and Caicos" data-caption="<b>Turks and Caicos Coastline</b><br>Turks and Caicos" data-meta="March 2024 · DJI" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Turks &amp; Caicos</span></div></div>
+    <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/dronefall.jpg" alt="Vermont" data-caption="<b>Fall Foliage</b><br>Stratton, VT" data-meta="October 2025 · DJI" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Stratton, VT</span></div></div>
+    <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/dronebeach2.jpg" alt="Cape Cod" data-caption="<b>Chatham Lighthouse Beach</b><br>Cape Cod, MA" data-meta="July 2020 · DJI" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Cape Cod, MA</span></div></div>
+    <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/travellight.jpg" alt="Maine" data-caption="<b>Portland Head Lighthouse</b><br>Portland, ME" data-meta="November 2025 · Canon" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Portland, ME</span></div></div>
+    <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/travelboston2.jpg" alt="Boston" data-caption="<b>Boston Skyline</b><br>Boston, MA" data-meta="November 2025 · Canon" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Boston, MA</span></div></div>
+    <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/travelme.jpg" alt="Olympic NP" data-caption="<b>Hiking in Olympic National Park</b><br>Washington" data-meta="May 2025 · Canon" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Olympic NP, WA</span></div></div>
+    <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/travelgondola.jpg" alt="Austria" data-caption="<b>Gondola on Zwolferhorn</b><br>Austria" data-meta="October 2024 · Canon" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Austria</span></div></div>
+    <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/travelbridge.jpg" alt="Lisbon" data-caption="<b>25 de Abril Bridge</b><br>Lisbon, Portugal" data-meta="July 2023 · Canon" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Lisbon, Portugal</span></div></div>
+    <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/dronewave.jpg" alt="Turks and Caicos" data-caption="<b>Beach</b><br>Turks and Caicos" data-meta="March 2024 · DJI" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Turks &amp; Caicos</span></div></div>
+    <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/asiamonkey.jpg" alt="Malaysia" data-caption="<b>Monkey</b><br>Kuala Lumpur, Malaysia" data-meta="January 2026 · Canon" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Kuala Lumpur, Malaysia</span></div></div>
+    <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/travelsalz.jpg" alt="Austria" data-caption="<b>Salzburg</b><br>Austria" data-meta="October 2024 · Canon" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Salzburg, Austria</span></div></div>
+    <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/travelturtle.jpg" alt="Turks and Caicos" data-caption="<b>Sea Turtle</b><br>Turks and Caicos" data-meta="March 2024 · GoPro" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Turks &amp; Caicos</span></div></div>
+    <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/travelsign.jpg" alt="Los Angeles" data-caption="<b>Hollywood Sign</b><br>Los Angeles, CA" data-meta="June 2023 · Canon" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Los Angeles, CA</span></div></div>
+    <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/travelseattle.jpg" alt="Seattle" data-caption="<b>Pike Place Market Area</b><br>Seattle, WA" data-meta="May 2025 · Canon" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Seattle, WA</span></div></div>
+    <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/monkey.jpg" alt="Costa Rica" data-caption="<b>Monkey</b><br>Manuel Antonio National Park, Costa Rica" data-meta="June 2022 · Canon" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Costa Rica</span></div></div>
+    <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/dronebass.jpg" alt="Cape Cod" data-caption="<b>Bassetts Island</b><br>Cape Cod, MA" data-meta="June 2024 · DJI" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Cape Cod, MA</span></div></div>
+    <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/traveldrive.jpg" alt="Pacific Northwest" data-caption="<b>Pacific Northwest Road Trip</b><br>Washington" data-meta="May 2025 · Canon" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Pacific Northwest</span></div></div>
+    <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/droneblack.jpg" alt="Iceland" data-caption="<b>Black Sand Beach</b><br>Iceland" data-meta="July 2021 · DJI" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Iceland</span></div></div>
+    <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/boston1.jpg" alt="Boston" data-caption="<b>Boston Harbor</b><br>Boston, MA" data-meta="September 2020 · Canon" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Boston, MA</span></div></div>
+    <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/droneharbor.jpg" alt="Rockport" data-caption="<b>Rockport Harbor</b><br>Rockport, MA" data-meta="June 2021 · DJI" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Rockport, MA</span></div></div>
+    <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/droneroad.jpg" alt="Iceland" data-caption="<b>Ring Road</b><br>Iceland" data-meta="July 2021 · DJI" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Iceland</span></div></div>
+    <div class="masonry-item" onclick="openLightbox(this)"><img src="jpgs/asiaboatframe.jpg" alt="Vietnam" data-caption="<b>Boat on the Mekong River</b><br>Vietnam" data-meta="January 2026 · Canon" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Mekong River, Vietnam</span></div></div>
+</div>
 
-        let galleryImages = Array.from(document.querySelectorAll('.masonry-item'));
-        let currentIndex = 0;
+<div class="gallery-info">
+    <div class="info-block"><p class="info-label">About This Collection</p><p class="info-text">Hand-picked favorites spanning 10+ years of travel and photography across multiple countries and locations.</p></div>
+    <div class="info-block"><p class="info-label">Browse by Trip</p><p class="info-text"><a href="landscapeshome.html" style="color:var(--accent);text-decoration:none;">← Back to all collections</a></p></div>
+    <div class="info-block"><p class="info-label">Order a Print</p><p class="info-text">All photos available as high-resolution fine art prints.</p><a href="contact.html" class="order-btn">Enquire →</a></div>
+</div>
 
-        function openLightbox(item) {
-            const img = item.querySelector('img');
-            document.getElementById('lightbox-img').src = img.src;
-            document.getElementById('lightbox-caption').innerHTML = img.dataset.caption || '';
-            document.querySelector('.lightbox').style.display = 'flex';
+<footer class="site-footer">
+    <div class="footer-left">© 2026 Megan Tucker Photography — All Rights Reserved</div>
+    <div class="footer-right">
+        <a href="https://www.instagram.com/flicsbymegan/" target="_blank" class="social-icon"><img src="jpgs/instagram.svg" alt="Instagram"></a>
+        <a href="https://www.linkedin.com/in/meganmtucker10/" target="_blank" class="social-icon"><img src="jpgs/linkedin.svg" alt="LinkedIn"></a>
+        <a href="https://www.youtube.com/meganmariet" target="_blank" class="social-icon"><img src="jpgs/youtube.svg" alt="YouTube"></a>
+    </div>
+</footer>
 
-            // Show Next button
-            document.getElementById('lightbox-next').style.display = 'block';
-            document.getElementById('lightbox-next-left').style.display = 'block';
-            // Hide nav menus
-            document.querySelector('nav').classList.add('nav-hidden');
-            document.querySelector('.mobile-nav').classList.add('nav-hidden');
-
-            currentIndex = galleryImages.indexOf(item);
-        }
-
-        function closeLightbox(event) {
-            if (event.target.classList.contains('lightbox') || event.target.classList.contains('close-btn')) {
-                document.querySelector('.lightbox').style.display = 'none';
-
-                // Hide Next button
-                document.getElementById('lightbox-next').style.display = 'none'; // hide button
-                document.getElementById('lightbox-next-left').style.display = 'none'; // hide button
-                // Show nav menus
-                document.querySelector('nav').classList.remove('nav-hidden');
-                document.querySelector('.mobile-nav').classList.remove('nav-hidden');
-            }
-        }
-
-        function nextPhoto() {
-            currentIndex++;
-            if (currentIndex >= galleryImages.length) currentIndex = 0;
-
-            const nextItem = galleryImages[currentIndex];
-            const nextImg = nextItem.querySelector('img');
-
-            document.getElementById('lightbox-img').src = nextImg.src;
-            document.getElementById('lightbox-caption').innerHTML = nextImg.dataset.caption || '';
-        }
-
-        function prevPhoto() {
-            currentIndex--; // go to previous index
-            if (currentIndex < 0) currentIndex = galleryImages.length - 1; // loop to last image if at start
-
-            const prevItem = galleryImages[currentIndex];
-            const prevImg = prevItem.querySelector('img');
-
-            document.getElementById('lightbox-img').src = prevImg.src;
-            document.getElementById('lightbox-caption').innerHTML = prevImg.dataset.caption || '';
-        }
-
-            function toggleMenu() {
-            const links = document.getElementById('mobileLinks');
-            if (links.style.display === "flex") {
-            links.style.display = "none";
-        } else {
-            links.style.display = "flex";
-        }
-        }
-
-    </script>
-
-
-    <footer class="site-footer">
-        <div class="footer-left">
-            © 2026 Megan Tucker Photography — All Rights Reserved
-        </div>
-        <div class="footer-right">
-            <a href="https://www.instagram.com/flicsbymegan/" target="_blank" class="social-icon">
-                <img src="jpgs/instagram.svg" alt="Instagram" />
-            </a>
-            <a href="https://www.linkedin.com/in/meganmtucker10/" target="_blank" class="social-icon">
-                <img src="jpgs/linkedin.svg" alt="LinkedIn" />
-            </a>
-            <a href="https://www.youtube.com/meganmariet" target="_blank" class="social-icon">
-                <img src="jpgs/youtube.svg" alt="YouTube" />
-            </a>
-        </div>
-    </footer>
-</body>
-</html>
-
-
-
-
-
+<div class="lightbox" id="lightbox" onclick="handleLightboxClick(event)">
+    <button class="lb-close" onclick="closeLightbox()">✕</button>
+    <button class="lb-nav lb-prev" onclick="navigate(-1)">‹</button>
+    <button class="lb-nav lb-next" onclick="navigate(1)">›</button>
+    <div class="lb-counter" id="lbCounter"></div>
+    <div class="lightbox-inner"><img id="lbImg" src="" alt=""><div class="lightbox-caption-bar"><div class="lb-caption-text" id="lbCaption"></div><div class="lb-caption-meta" id="lbMeta"></div></div></div>
+</div>
+<script>
+    const nav=document.getElementById('desktopNav');
+    window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>60));
+    function toggleMenu(){const l=document.getElementById('mobileLinks');l.style.display=l.style.display==='flex'?'none':'flex';}
+    const allItems=Array.from(document.querySelectorAll('.masonry-item'));
+    let currentIndex=0;
+    function openLightbox(item){currentIndex=allItems.indexOf(item);renderLightbox();document.getElementById('lightbox').classList.add('open');document.body.style.overflow='hidden';}
+    function renderLightbox(){const img=allItems[currentIndex].querySelector('img');document.getElementById('lbImg').src=img.src;document.getElementById('lbCaption').innerHTML=img.dataset.caption||'';document.getElementById('lbMeta').textContent=img.dataset.meta||'';document.getElementById('lbCounter').textContent=(currentIndex+1)+' / '+allItems.length;}
+    function closeLightbox(){document.getElementById('lightbox').classList.remove('open');document.body.style.overflow='';}
+    function navigate(dir){currentIndex=(currentIndex+dir+allItems.length)%allItems.length;renderLightbox();}
+    function handleLightboxClick(e){if(e.target===document.getElementById('lightbox'))closeLightbox();}
+    document.addEventListener('keydown',e=>{if(!document.getElementById('lightbox').classList.contains('open'))return;if(e.key==='ArrowRight')navigate(1);if(e.key==='ArrowLeft')navigate(-1);if(e.key==='Escape')closeLightbox();});
+    let tx=0;document.getElementById('lightbox').addEventListener('touchstart',e=>{tx=e.changedTouches[0].clientX;});
+    document.getElementById('lightbox').addEventListener('touchend',e=>{const d=tx-e.changedTouches[0].clientX;if(Math.abs(d)>40)navigate(d>0?1:-1);});
+</script>
+</body></html>
