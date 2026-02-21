@@ -200,13 +200,15 @@
 
 <!-- PRICING CROSSLINK -->
 <div style="max-width:1400px; margin:0 auto; padding:48px 20px 0;">
-    <div style="display:flex; align-items:center; justify-content:space-between; gap:24px; padding:28px 36px; border:1px solid rgba(200,169,110,0.2); border-radius:3px; background:rgba(200,169,110,0.03);">
-        <div>
-            <p style="font-size:9px; letter-spacing:0.25em; text-transform:uppercase; color:var(--accent); margin-bottom:7px;">Pricing Information</p>
-            <p style="font-family:'Cormorant Garamond',serif; font-size:22px; font-weight:300; color:var(--light); margin-bottom:6px;">Sessions prices <em style="font-style:italic; color:var(--accent);">vary based on shoot</em></p>
-            <p style="font-size:13px; color:var(--silver);">Fully edited gallery, multiple angles, and quick delivery included.</p>
+    <div style="display:grid; grid-template-columns:1fr 1fr; border:1px solid rgba(200,169,110,0.2); border-radius:3px; overflow:hidden; min-height:200px;" class="pricing-split">
+        <div style="background:rgba(200,169,110,0.04); display:flex; flex-direction:column; justify-content:center; padding:36px 40px; border-right:1px solid rgba(200,169,110,0.15);">
+            <p style="font-size:9px; letter-spacing:0.25em; text-transform:uppercase; color:var(--accent); margin-bottom:12px;">Transparent Pricing</p>
+            <p style="font-family:'Cormorant Garamond',serif; font-size:clamp(22px,2.5vw,32px); font-weight:300; color:var(--light); line-height:1.2; margin-bottom:8px;">Rates vary based on <em style="font-style:italic;color:var(--accent);">details</em></p>
         </div>
-        <a href="pricing.html" style="display:inline-block; white-space:nowrap; flex-shrink:0; padding:12px 28px; border:1px solid var(--accent); color:var(--accent); text-decoration:none; font-size:10px; letter-spacing:0.2em; text-transform:uppercase; border-radius:2px; transition:all 0.25s;" onmouseover="this.style.background='var(--accent)';this.style.color='var(--black)'" onmouseout="this.style.background='transparent';this.style.color='var(--accent)'">View Full Pricing →</a>
+        <div style="display:flex; flex-direction:column; justify-content:center; padding:36px 40px;">
+            <p style="font-size:13px; color:var(--silver); line-height:1.7; margin-bottom:24px;">Fully edited gallery, quick delivery, and multiple angles included on every session.</p>
+            <a href="pricing.html" style="display:inline-block; align-self:flex-start; padding:11px 26px; border:1px solid var(--accent); color:var(--accent); text-decoration:none; font-size:10px; letter-spacing:0.2em; text-transform:uppercase; border-radius:2px; transition:all 0.25s;" onmouseover="this.style.background='var(--accent)';this.style.color='var(--black)'" onmouseout="this.style.background='transparent';this.style.color='var(--accent)'">View Full Pricing →</a>
+        </div>
     </div>
 </div>
 
