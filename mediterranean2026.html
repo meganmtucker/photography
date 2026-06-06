@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XW45ZFL71R"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XW45ZFL71R');
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mediterranean 2026 | Megan Tucker Photography</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+</head>
+<body>
+
+<nav class="desktop-nav" id="desktopNav">
+    <a href="index.html">Home</a>
+    <a href="landscapeshome.html" class="active">Landscapes</a>
+    <a href="seniors.html">Senior Portraits</a>
+    <a href="realestate.html">Real Estate</a>
+    <a href="contact.html">Contact</a>
+</nav>
+<nav class="mobile-nav" id="mobileNav">
+    <div class="mobile-nav-header">
+        <span class="mobile-logo">Megan Tucker Photography</span>
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+    </div>
+    <div class="mobile-links" id="mobileLinks">
+        <a href="index.html">Home</a>
+        <a href="landscapeshome.html" class="active">Landscapes</a>
+        <a href="seniors.html">Senior Portraits</a>
+        <a href="realestate.html">Real Estate</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</nav>
+
+<section class="hero">
+    <div class="hero-bg" style="background-image: url('jpgs/santoriniumbrella.jpg');"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <span class="hero-eyebrow">Landscapes · May 2026</span>
+        <h1 class="hero-title">Mediterranean</h1>
+        <p class="hero-subtitle">Greece &nbsp;·&nbsp; Croatia &nbsp;·&nbsp; Slovenia</p>
+    </div>
+    <div class="hero-scroll"><div class="scroll-line"></div><span>Scroll</span></div>
+</section>
+
+<!-- FILTER BAR -->
+<div class="filter-bar">
+    <button class="filter-btn active" onclick="filterGallery('all', this)">All <span class="filter-count" id="count-all"></span></button>
+    <button class="filter-btn" onclick="filterGallery('gr', this)">Greece <span class="filter-count" id="count-gr"></span></button>
+    <button class="filter-btn" onclick="filterGallery('hr', this)">Croatia <span class="filter-count" id="count-hr"></span></button>
+    <button class="filter-btn" onclick="filterGallery('si', this)">Slovenia <span class="filter-count" id="count-si"></span></button>
+</div>
+
+<div class="gallery-section">
+    <div class="masonry" id="gallery">
+        <!-- PICS -->
+        <div class="masonry-item" data-state="gr" onclick="openLightbox(this)"><img src="jpgs/athenshill.jpg" alt="Greece" data-caption="<b>Athens</b><br>Greece" data-meta="May 2026 · Canon R7" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Athens</span></div></div>
+        <div class="masonry-item" data-state="gr" onclick="openLightbox(this)"><img src="jpgs/athenssunset.jpg" alt="Greece" data-caption="<b>Athens</b><br>Greece" data-meta="May 2026 · Canon R7" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Athens</span></div></div>
+        <div class="masonry-item" data-state="gr" onclick="openLightbox(this)"><img src="jpgs/athensmotorcycle.jpg" alt="Greece" data-caption="<b>Athens</b><br>Greece" data-meta="May 2026 · Canon R7" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Athens</span></div></div>
+        <div class="masonry-item" data-state="gr" onclick="openLightbox(this)"><img src="jpgs/santoriniflowers.jpg" alt="Greece" data-caption="<b>Santorini</b><br>Greece" data-meta="May 2026 · Canon R7" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Santorini</span></div></div>
+        <div class="masonry-item" data-state="hr" onclick="openLightbox(this)"><img src="jpgs/dubrovniktower2.jpg" alt="Croatia" data-caption="<b>Dubrovnik</b><br>Croatia" data-meta="May 2026 · Canon R7" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Dubrovnik</span></div></div>
+        <div class="masonry-item" data-state="hr" onclick="openLightbox(this)"><img src="jpgs/dubrovnikoverview.jpg" alt="Croatia" data-caption="<b>Dubrovnik</b><br>Croatia" data-meta="May 2026 · Canon R7" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Dubrovnik</span></div></div>
+        <div class="masonry-item" data-state="hr" onclick="openLightbox(this)"><img src="jpgs/dubrovnikchurch.jpg" alt="Croatia" data-caption="<b>Dubrovnik</b><br>Croatia" data-meta="May 2026 · Canon R7" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Dubrovnik</span></div></div>
+        <div class="masonry-item" data-state="gr" onclick="openLightbox(this)"><img src="jpgs/hydradrone.jpg" alt="Greece" data-caption="<b>Hydra</b><br>Greece" data-meta="May 2026 · DJI Mavic Mini" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Hydra</span></div></div>
+        <div class="masonry-item" data-state="gr" onclick="openLightbox(this)"><img src="jpgs/santorinihotel.jpg" alt="Greece" data-caption="<b>Santorini</b><br>Greece" data-meta="May 2026 · Canon R7" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Santorini</span></div></div>
+        
+        <div class="masonry-item" data-state="gr" onclick="openLightbox(this)"><img src="jpgs/athenssquare.jpg" alt="Greece" data-caption="<b>Athens</b><br>Greece" data-meta="May 2026 · Canon R7" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Athens</span></div></div>
+        <div class="masonry-item" data-state="gr" onclick="openLightbox(this)"><img src="jpgs/hydrahill.jpg" alt="Greece" data-caption="<b>Hydra</b><br>Greece" data-meta="May 2026 · DJI Mavic Mini" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Hydra</span></div></div>
+        <div class="masonry-item" data-state="gr" onclick="openLightbox(this)"><img src="jpgs/corfuboat.jpg" alt="Greece" data-caption="<b>Corfu</b><br>Greece" data-meta="May 2026 · Canon R7" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Corfu</span></div></div>
+        <div class="masonry-item" data-state="hr" onclick="openLightbox(this)"><img src="jpgs/dubrovniktower.jpg" alt="Croatia" data-caption="<b>Dubrovnik</b><br>Croatia" data-meta="May 2026 · Canon R7" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Dubrovnik</span></div></div>
+        <div class="masonry-item" data-state="hr" onclick="openLightbox(this)"><img src="jpgs/dubrovnikwall.jpg" alt="Croatia" data-caption="<b>Dubrovnik</b><br>Croatia" data-meta="May 2026 · Canon R7" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Dubrovnik</span></div></div>
+        <div class="masonry-item" data-state="gr" onclick="openLightbox(this)"><img src="jpgs/athensshutters.jpg" alt="Greece" data-caption="<b>Athens</b><br>Greece" data-meta="May 2026 · Canon R7" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Athens</span></div></div>
+        <div class="masonry-item" data-state="gr" onclick="openLightbox(this)"><img src="jpgs/santoriniumbrella.jpg" alt="Greece" data-caption="<b>Santorini</b><br>Greece" data-meta="May 2026 · Canon R7" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Santorini</span></div></div>
+        
+        <div class="masonry-item" data-state="gr" onclick="openLightbox(this)"><img src="jpgs/hydraport.jpg" alt="Greece" data-caption="<b>Hydra</b><br>Greece" data-meta="May 2026 · Canon R7" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Hydra</span></div></div>
+        <div class="masonry-item" data-state="gr" onclick="openLightbox(this)"><img src="jpgs/hydraalley.jpg" alt="Greece" data-caption="<b>Hydra</b><br>Greece" data-meta="May 2026 · Canon R7" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Hydra</span></div></div>
+        <div class="masonry-item" data-state="hr" onclick="openLightbox(this)"><img src="jpgs/splitstreet.jpg" alt="Croatia" data-caption="<b>City Walls</b><br>Croatia" data-meta="May 2026 · Canon R7" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Spilt</span></div></div>
+        <div class="masonry-item" data-state="hr" onclick="openLightbox(this)"><img src="jpgs/splitarch.jpg" alt="Croatia" data-caption="<b>Croatian Coast</b><br>Croatia" data-meta="May 2026 · Canon R7" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Spilt</span></div></div>
+        <div class="masonry-item" data-state="hr" onclick="openLightbox(this)"><img src="jpgs/dubrovniksquare.jpg" alt="Croatia" data-caption="<b>Split</b><br>Croatia" data-meta="May 2026 · Canon R7" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Dubrovnik</span></div></div>
+        <div class="masonry-item" data-state="gr" onclick="openLightbox(this)"><img src="jpgs/hydraalley2.jpg" alt="Greece" data-caption="<b>Hydra</b><br>Greece" data-meta="May 2026 · Canon R7" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Hydra</span></div></div>
+        <div class="masonry-item" data-state="gr" onclick="openLightbox(this)"><img src="jpgs/santorinicaldera.jpg" alt="Greece" data-caption="<b>Santorini</b><br>Greece" data-meta="May 2026 · Canon R7" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Santorini</span></div></div>
+        <div class="masonry-item" data-state="gr" onclick="openLightbox(this)"><img src="jpgs/santoriniview.jpg" alt="Greece" data-caption="<b>Santorini</b><br>Greece" data-meta="May 2026 · Canon R7" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Santorini</span></div></div>
+        <div class="masonry-item" data-state="gr" onclick="openLightbox(this)"><img src="jpgs/olympiaruins.jpg" alt="Greece" data-caption="<b>Olympia</b><br>Greece" data-meta="May 2026 · Canon R7" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Olympia</span></div></div>
+        <div class="masonry-item" data-state="si" onclick="openLightbox(this)"><img src="jpgs/koperroof.jpg" alt="Slovenia" data-caption="<b>Koper</b><br>Slovenia" data-meta="May 2026 · Canon R7" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Slovenia</span></div></div>
+        
+        <div class="masonry-item" data-state="gr" onclick="openLightbox(this)"><img src="jpgs/corfucliff.jpg" alt="Greece" data-caption="<b>Corfu</b><br>Greece" data-meta="May 2026 · Canon R7" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Corfu</span></div></div>
+        <div class="masonry-item" data-state="gr" onclick="openLightbox(this)"><img src="jpgs/corfushop.jpg" alt="Greece" data-caption="<b>Corfu</b><br>Greece" data-meta="May 2026 · Canon R7" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Corfu</span></div></div>
+
+        <div class="masonry-item" data-state="hr" onclick="openLightbox(this)"><img src="jpgs/trogirwater.jpg" alt="Croatia" data-caption="<b>Dubrovnik Old Town</b><br>Croatia" data-meta="May 2026 · Canon R7" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Trogir</span></div></div>
+        <div class="masonry-item" data-state="hr" onclick="openLightbox(this)"><img src="jpgs/trogirtower.jpg" alt="Croatia" data-caption="<b>Adriatic Coast</b><br>Croatia" data-meta="May 2026 · Canon R7" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Trogir</span></div></div>
+        <div class="masonry-item" data-state="hr" onclick="openLightbox(this)"><img src="jpgs/trogiralley.jpg" alt="Croatia" data-caption="<b>Dubrovnik Old Town</b><br>Croatia" data-meta="May 2026 · Canon R7" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Trogir</span></div></div>
+        <div class="masonry-item" data-state="gr" onclick="openLightbox(this)"><img src="jpgs/olympiaboat.jpg" alt="Greece" data-caption="<b>Katakolon</b><br>Greece" data-meta="May 2026 · Canon R7" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Olympia</span></div></div>
+        <div class="masonry-item" data-state="gr" onclick="openLightbox(this)"><img src="jpgs/olympiastreet.jpg" alt="Greece" data-caption="<b>Katakolon</b><br>Greece" data-meta="May 2026 · Canon R7" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Olympia</span></div></div>
+        <div class="masonry-item" data-state="gr" onclick="openLightbox(this)"><img src="jpgs/corfubeach.jpg" alt="Greece" data-caption="<b>Corfu</b><br>Greece" data-meta="May 2026 · Canon R7" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Corfu</span></div></div>
+        
+        <div class="masonry-item" data-state="hr" onclick="openLightbox(this)"><img src="jpgs/splittower.jpg" alt="Croatia" data-caption="<b>Dubrovnik Old Town</b><br>Croatia" data-meta="May 2026 · Canon R7" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Spilt</span></div></div>
+        <div class="masonry-item" data-state="hr" onclick="openLightbox(this)"><img src="jpgs/dubrovnikcat.jpg" alt="Croatia" data-caption="<b>Dubrovnik</b><br>Croatia" data-meta="May 2026 · Canon R7" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Dubrovnik</span></div></div>
+        <div class="masonry-item" data-state="hr" onclick="openLightbox(this)"><img src="jpgs/dubrovnikroof.jpg" alt="Croatia" data-caption="<b>Dubrovnik</b><br>Croatia" data-meta="May 2026 · Canon R7" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Dubrovnik</span></div></div>
+       <div class="masonry-item" data-state="hr" onclick="openLightbox(this)"><img src="jpgs/splitclothes.jpg" alt="Croatia" data-caption="<b>Hvar Island</b><br>Croatia" data-meta="May 2026 · Canon R7" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Spilt</span></div></div>
+        <div class="masonry-item" data-state="hr" onclick="openLightbox(this)"><img src="jpgs/dubrovnikalley.jpg" alt="Croatia" data-caption="<b>Dubrovnik</b><br>Croatia" data-meta="May 2026 · Canon R7" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Dubrovnik</span></div></div>
+        <div class="masonry-item" data-state="hr" onclick="openLightbox(this)"><img src="jpgs/dubrovnikrest.jpg" alt="Croatia" data-caption="<b>Dubrovnik</b><br>Croatia" data-meta="May 2026 · Canon R7" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Dubrovnik</span></div></div>
+        <div class="masonry-item" data-state="si" onclick="openLightbox(this)"><img src="jpgs/koperchimney.jpg" alt="Slovenia" data-caption="<b>Koper</b><br>Slovenia" data-meta="May 2026 · Canon R7" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Slovenia</span></div></div>
+        
+        <div class="masonry-item" data-state="si" onclick="openLightbox(this)"><img src="jpgs/koperstreet.jpg" alt="Slovenia" data-caption="Slovenia" data-meta="May 2026 · Canon R7" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Slovenia</span></div></div>
+        <div class="masonry-item" data-state="si" onclick="openLightbox(this)"><img src="jpgs/sloveniacave.jpg" alt="Slovenia" data-caption="Slovenia" data-meta="May 2026 · Canon R7" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Slovenia</span></div></div>
+        <div class="masonry-item" data-state="si" onclick="openLightbox(this)"><img src="jpgs/sloveniacountryside.jpg" alt="Slovenia" data-caption="Slovenia" data-meta="May 2026 · Canon R7" loading="lazy"><div class="photo-hover"><span class="photo-hover-text">Slovenia</span></div></div>
+    
+    </div>
+</div>
+
+<div class="gallery-info">
+    <div class="info-block">
+        <p class="info-label">Camera Details</p>
+        <p class="info-text">Canon R7 · 18–150mm lens</p>
+    </div>
+    <div class="info-block">
+        <p class="info-label">Trip Details</p>
+        <p class="info-text">~2 weeks in the Eastern Mediterranean <br>Exploring &amp; island hopping · May 2026</p>
+    </div>
+    <div class="info-block">
+        <p class="info-label">Order a Print</p>
+        <p class="info-text">All photos available as fine art prints.</p>
+        <a href="contact.html" class="order-btn">Inquire →</a>
+    </div>
+</div>
+
+<footer class="site-footer">
+    <div>© 2026 Megan Tucker Photography — All Rights Reserved</div>
+    <div class="footer-right">
+        <a href="https://www.instagram.com/flicsbymegan/" target="_blank" class="social-icon"><img src="jpgs/instagram.svg" alt="Instagram"></a>
+        <a href="https://www.linkedin.com/in/meganmtucker10/" target="_blank" class="social-icon"><img src="jpgs/linkedin.svg" alt="LinkedIn"></a>
+        <a href="https://www.youtube.com/meganmariet" target="_blank" class="social-icon"><img src="jpgs/youtube.svg" alt="YouTube"></a>
+    </div>
+</footer>
+
+<div class="lightbox" id="lightbox" onclick="handleLightboxClick(event)">
+    <button class="lb-close" onclick="closeLightbox()">✕</button>
+    <button class="lb-nav lb-prev" onclick="navigate(-1)">‹</button>
+    <button class="lb-nav lb-next" onclick="navigate(1)">›</button>
+    <div class="lb-counter" id="lbCounter"></div>
+    <div class="lightbox-inner"><img id="lbImg" src="" alt=""><div class="lightbox-caption-bar"><div class="lb-caption-text" id="lbCaption"></div><div class="lb-caption-meta" id="lbMeta"></div></div></div>
+</div>
+<script>
+    const desktopNav = document.getElementById('desktopNav');
+    window.addEventListener('scroll', () => desktopNav.classList.toggle('scrolled', window.scrollY > 60));
+    function toggleMenu() { const l = document.getElementById('mobileLinks'); l.style.display = l.style.display === 'flex' ? 'none' : 'flex'; }
+
+    // ── FILTER ──
+    function filterGallery(state, btn) {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        document.querySelectorAll('.masonry-item').forEach(item => {
+            item.classList.toggle('hidden', state !== 'all' && item.dataset.state !== state);
+        });
+        updateCounts();
+        visibleItems = Array.from(document.querySelectorAll('.masonry-item:not(.hidden)'));
+    }
+    function updateCounts() {
+        const all = document.querySelectorAll('.masonry-item');
+        const counts = { all: all.length, gr: 0, hr: 0, si: 0 };
+        all.forEach(i => { if (i.dataset.state) counts[i.dataset.state]++; });
+        Object.keys(counts).forEach(k => { const el = document.getElementById('count-' + k); if (el) el.textContent = counts[k]; });
+    }
+
+    // ── LIGHTBOX ──
+    let visibleItems = [], currentIndex = 0;
+    function openLightbox(item) {
+        visibleItems = Array.from(document.querySelectorAll('.masonry-item:not(.hidden)'));
+        currentIndex = visibleItems.indexOf(item);
+        renderLightbox();
+        document.getElementById('lightbox').classList.add('open');
+        document.body.style.overflow = 'hidden';
+    }
+    function renderLightbox() { const img = visibleItems[currentIndex].querySelector('img'); document.getElementById('lbImg').src = img.src; document.getElementById('lbCaption').innerHTML = img.dataset.caption || ''; document.getElementById('lbMeta').textContent = img.dataset.meta || ''; document.getElementById('lbCounter').textContent = `${currentIndex + 1} / ${visibleItems.length}`; }
+    function closeLightbox() { document.getElementById('lightbox').classList.remove('open'); document.body.style.overflow = ''; }
+    function navigate(dir) { currentIndex = (currentIndex + dir + visibleItems.length) % visibleItems.length; renderLightbox(); }
+    function handleLightboxClick(e) { if (e.target === document.getElementById('lightbox')) closeLightbox(); }
+    document.addEventListener('keydown', e => { if (!document.getElementById('lightbox').classList.contains('open')) return; if (e.key === 'ArrowRight') navigate(1); if (e.key === 'ArrowLeft') navigate(-1); if (e.key === 'Escape') closeLightbox(); });
+    let touchStartX = 0;
+    document.getElementById('lightbox').addEventListener('touchstart', e => { touchStartX = e.changedTouches[0].clientX; });
+    document.getElementById('lightbox').addEventListener('touchend', e => { const diff = touchStartX - e.changedTouches[0].clientX; if (Math.abs(diff) > 40) navigate(diff > 0 ? 1 : -1); });
+
+    // Init
+    updateCounts();
+    visibleItems = Array.from(document.querySelectorAll('.masonry-item'));
+</script>
+</body>
+</html>
