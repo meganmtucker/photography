@@ -331,7 +331,7 @@ a    { color: inherit; }
     overflow: hidden;
 }
 .home-hero-bg {
-    position: absolute; inset: 0; background-image: url('jpgs/landmountain.jpg');
+    position: absolute; inset: 0; background-image: url('jpgs/cosunrisehaze.jpeg');
     background-size: cover; background-position: center 55%;
     transform: scale(1.04); transition: transform 10s ease; filter: brightness(0.4);
 }
